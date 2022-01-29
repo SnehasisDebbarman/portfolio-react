@@ -1,10 +1,28 @@
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 .App {
   text-align: center;
 }
-
+body{
+  background-color: #F2F4F8;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.full{
+  min-height: 100vh;
+}
+.center{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-60%,100%);
+  width: 70%;
+  font-size: 2.7rem;
+  color: #94a3b8;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,3 +54,106 @@
     transform: rotate(360deg);
   }
 }
+.dcv{
+  margin: 2rem;
+  position: absolute;
+  right: 0;
+  background-color: #94a3b8;
+  padding: 1rem 1.5rem;
+  color: white;
+  font-style:bold;
+  border-radius: 5px;
+}
+.blob1{
+  
+  height: 40rem;
+  width: 40rem;
+  position: absolute;
+  right: 15rem;
+  top:1rem;
+  z-index: -1;
+}
+.blob2{
+  height: 20rem;
+  width: 20rem;
+  position: absolute;
+  right: 20rem;
+  top:1rem;
+  z-index: -1;
+}
+.loading {
+  animation: rotation 15s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
+body{
+  background:black;
+}
+
+.main{
+  
+  width:330px;
+  height:330px;
+  border:1px solid #CCC;
+  position:absolute;
+  top:30%; 
+  bottom:0; 
+  left:-15%;
+  margin:auto;
+  border-radius:50%; 
+}
+
+.circle{
+  width:30px;
+  height:30px;
+  background:cyan;
+  border-radius:50%;
+  position:absolute;
+  top:0; bottom:0; left:0;right:0;
+  overflow:hidden;
+  margin:auto;
+  animation: circle 6s linear infinite;
+}
+
+@keyframes circle{
+  0%{
+    transform:rotate(0deg)
+              translate(-165px)
+              rotate(0deg);
+  
+  }
+  100%{
+    transform:rotate(360deg)
+              translate(-165px)
+              rotate(-360deg);
+  }
+}
+@media screen and (max-width: 480px){
+  .center{
+    top: -20%;
+    color: whitesmoke;
+  }
+  .blob1{
+    height: 20rem;
+    right: -70%;
+    top: 10%;
+  }
+  .blob2{
+    height: 20rem;
+    right: 0%;
+    top: 5%;
+  }
+  .dcv{
+    margin: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.7rem;
+  }
+}
+
