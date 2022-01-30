@@ -106,6 +106,7 @@ body{
 .section-two{
   min-height: 100vh;
   padding: 2rem;
+  /* scroll-snap-stop: always; */
 }
 .section-two Grid{
   color: #94a3b8;

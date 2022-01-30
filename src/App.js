@@ -2,6 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Nav from "./Nav";
 import "animate.css";
+// import Typing from "react-typing-animation";
 import Name from "./name";
 import { Grid, Box } from "@mui/material";
 import Css from "./logos/css.png";
@@ -11,9 +12,9 @@ import rt from "./logos/react.png";
 
 function App() {
   return (
-    <div>
+    <div className="snap-y snap-mandatory">
       {/* <Nav className="" /> */}
-      <section>
+      <section className=" snap-start snap-always">
         <div className="slate-300 full">
           <button className="dcv hover:bg-red-500">Download CV</button>
           <Grid container spacing={2}>
@@ -25,16 +26,28 @@ function App() {
               <Grid container>
                 <Grid item xs={3}></Grid>
                 <Grid item xs={2}>
-                  <img src={html} className="images" />
+                  <img
+                    src={html}
+                    className="images animate__animated animate__fadeInLeft animate__delay-2s"
+                  />
                 </Grid>
                 <Grid item xs={2}>
-                  <img src={Css} className="images" />
+                  <img
+                    src={Css}
+                    className="images animate__animated animate__fadeInLeft animate__delay-3s"
+                  />
                 </Grid>
                 <Grid item xs={2}>
-                  <img src={rt} className="images" />
+                  <img
+                    src={rt}
+                    className="images animate__animated animate__fadeInLeft animate__delay-4s"
+                  />
                 </Grid>
                 <Grid item xs={2}>
-                  <img src={js} className="images" />
+                  <img
+                    src={js}
+                    className="images animate__animated animate__fadeInLeft animate__delay-5s"
+                  />
                 </Grid>
               </Grid>
             </Grid>
@@ -67,9 +80,9 @@ function App() {
           </Grid>
         </div>
       </section>
-      <section className="section-two mt-4">
+      <section className=" snap-always section-two mt-4">
         <Grid container className="">
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} md={6} data-aos="zoom-in-right">
             <div>
               <h1 className=" about text-slate-400 ml-10 font-bold text">
                 {" "}
@@ -86,7 +99,51 @@ function App() {
               <div></div>
             </div>
           </Grid>
-          <Grid item xs={12} md={6} className="bg-yellow-400"></Grid>
+          <Grid item xs={12} md={6} className=""></Grid>
+          <Grid item xs={12} md={6} />
+          <Grid item xs={12} md={6} data-aos="zoom-in-left">
+            <div>
+              <h1 className=" about text-slate-400 ml-10 font-bold text">
+                {" "}
+                <span className="text-red-400 sf-mono about-text">2.</span>{" "}
+                Education
+              </h1>
+              <div className="text-slate-400  mt-5 about-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                earum eligendi non saepe soluta quia doloremque repellendus
+                veniam ratione minus harum officiis ipsam itaque quaerat
+                molestias, dolor omnis, assumenda eius. Lorem ipsum, dolor sit
+                amet consectetur adipisicing elit. Sed praesentium provident
+                dolorem voluptatem doloremque illum maxime, accusamus reiciendis
+                perferendis. Ipsa, labore officia voluptate ut eaque, aliquam
+                laudantium omnis voluptas laborum cumque consequuntur enim quae,
+                earum placeat dicta modi quibusdam dolores.
+              </div>
+
+              <div></div>
+            </div>
+          </Grid>
+        </Grid>
+      </section>
+      <section className="snap-always section-two">
+        <Grid container>
+          <Grid item xs={12} md={6}>
+            <div>
+              <h1 className=" about text-slate-400 ml-10 font-bold text">
+                {" "}
+                <span className="text-red-400 sf-mono about-text">3.</span>{" "}
+                About me
+              </h1>
+              <div className="text-slate-400  mt-5 about-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                earum eligendi non saepe soluta quia doloremque repellendus
+                veniam ratione minus harum officiis ipsam itaque quaerat
+                molestias, dolor omnis, assumenda eius.
+              </div>
+
+              <div></div>
+            </div>
+          </Grid>
         </Grid>
       </section>
     </div>
