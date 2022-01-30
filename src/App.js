@@ -4,6 +4,10 @@ import Nav from "./Nav";
 import "animate.css";
 import Name from "./name";
 import { Grid, Box } from "@mui/material";
+import Css from "./logos/css.png";
+import html from "./logos/html.png";
+import js from "./logos/js.png";
+import rt from "./logos/react.png";
 
 function App() {
   return (
@@ -18,6 +22,21 @@ function App() {
                 <div className="circle"></div>
               </div>
               <Name />
+              <Grid container>
+                <Grid item xs={3}></Grid>
+                <Grid item xs={2}>
+                  <img src={html} className="images" />
+                </Grid>
+                <Grid item xs={2}>
+                  <img src={Css} className="images" />
+                </Grid>
+                <Grid item xs={2}>
+                  <img src={rt} className="images" />
+                </Grid>
+                <Grid item xs={2}>
+                  <img src={js} className="images" />
+                </Grid>
+              </Grid>
             </Grid>
             <Grid item xs={12} md={4}>
               <div className="blob-container">
@@ -48,16 +67,26 @@ function App() {
           </Grid>
         </div>
       </section>
-      <section className="section-two">
+      <section className="section-two mt-4">
         <Grid container className="">
-          <Grid item xs={6}>
-            <h2 className=" about text-slate-400 text-3xl p-10 font-semibold">
-              {" "}
-              <span className="text-red-400 sf-mono">1.</span> About me
-            </h2>
-            <div></div>
+          <Grid item xs={12} md={6}>
+            <div>
+              <h1 className=" about text-slate-400 ml-10 font-bold text">
+                {" "}
+                <span className="text-red-400 sf-mono about-text">1.</span>{" "}
+                About me
+              </h1>
+              <div className="text-slate-400  mt-5 about-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
+                earum eligendi non saepe soluta quia doloremque repellendus
+                veniam ratione minus harum officiis ipsam itaque quaerat
+                molestias, dolor omnis, assumenda eius.
+              </div>
+
+              <div></div>
+            </div>
           </Grid>
-          <Grid item xs={6} className="bg-yellow-400"></Grid>
+          <Grid item xs={12} md={6} className="bg-yellow-400"></Grid>
         </Grid>
       </section>
     </div>
