@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import Typist from "react-typist";
 
 function Name() {
+  const [count, setCount] = useState(1);
+
+  useEffect(() => {
+    // document.title = `You clicked ${count} times`;
+    console.log("Count: " + count);
+    setCount(1);
+  }, [count]);
   return (
     <div>
       <div className="text-green-400 m-20 animate__animated animate__hinge animate__jackInTheBox ">
@@ -8,10 +16,20 @@ function Name() {
           <strong>
             Hello , I'm <br />
             <strong className=" text-red-500 sf-mono text-5xl">
-              Snehasis Debbarman.
+              <Typist>Snehasis Debbarman.</Typist>
             </strong>
-            <br />
-            <div className="">I build things for the web.</div>
+            <div className="">
+              {count ? (
+                <Typist avgTypingDelay={50} onTypingDone={() => setCount(0)}>
+                  <span> I am A Software Developer</span>
+                  <Typist.Backspace count={23} delay={2000} />
+                  <span> build things for web</span>
+                  <Typist.Delay ms={1000} />
+                </Typist>
+              ) : (
+                ""
+              )}
+            </div>
           </strong>
         </div>
       </div>
