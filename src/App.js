@@ -9,14 +9,22 @@ import Css from "./logos/css.png";
 import html from "./logos/html.png";
 import js from "./logos/js.png";
 import rt from "./logos/react.png";
+import TimeLine from "./TimeLine";
 
 function App() {
   return (
     <div className="snap-y snap-mandatory">
       {/* <Nav className="" /> */}
-      <section className=" snap-start snap-always">
+      <span className=" flex email content-center">
+        <a href="mailto: snehasisdebbarman2016@gmail.com">
+          snehasisdebbarman2016@gmail.com
+        </a>
+      </span>
+      <section className=" snap-start snap-always p-10">
         <div className="slate-300 full">
-          <button className="dcv hover:bg-red-500">Download CV</button>
+          <a href="./snehasis-resume_p.pdf" download>
+            <button className="dcv hover:bg-red-500">Download CV</button>
+          </a>
           <Grid container spacing={2}>
             <Grid item xs={12} md={8} className="circle-text-container">
               <div className="main">
@@ -24,26 +32,25 @@ function App() {
               </div>
               <Name />
               <Grid container>
-                <Grid item xs={3}></Grid>
-                <Grid item xs={2}>
+                <Grid item xs={3}>
                   <img
                     src={html}
                     className="images animate__animated animate__fadeInLeft animate__delay-2s"
                   />
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item xs={3}>
                   <img
                     src={Css}
                     className="images animate__animated animate__fadeInLeft animate__delay-3s"
                   />
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item xs={3}>
                   <img
                     src={rt}
                     className="images animate__animated animate__fadeInLeft animate__delay-4s"
                   />
                 </Grid>
-                <Grid item xs={2}>
+                <Grid item xs={3}>
                   <img
                     src={js}
                     className="images animate__animated animate__fadeInLeft animate__delay-5s"
@@ -80,20 +87,19 @@ function App() {
           </Grid>
         </div>
       </section>
-      <section className=" snap-always section-two mt-4">
+      <section className=" snap-always section-two mt-4 p-10">
         <Grid container className="">
           <Grid item xs={12} md={6} data-aos="zoom-in-right">
             <div>
-              <h1 className=" about text-slate-400 ml-10 font-bold text">
+              <h1 className=" about text-slate-400  font-bold text ">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">1.</span>{" "}
                 About me
               </h1>
               <div className="text-slate-400  mt-5 about-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-                earum eligendi non saepe soluta quia doloremque repellendus
-                veniam ratione minus harum officiis ipsam itaque quaerat
-                molestias, dolor omnis, assumenda eius.
+                Inventive frontend developer expertise in HTML, CSS,
+                Javascript/ES6/ES2017 , ReactJs,Redux with willingness to learn
+                and master Back-end Development, Cloud and Web Server
               </div>
 
               <div></div>
@@ -103,42 +109,62 @@ function App() {
           <Grid item xs={12} md={6} />
           <Grid item xs={12} md={6} data-aos="zoom-in-left">
             <div>
-              <h1 className=" about text-slate-400 ml-10 font-bold text">
+              <h1 className=" about text-slate-400 font-bold text">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">2.</span>{" "}
                 Education
               </h1>
               <div className="text-slate-400  mt-5 about-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-                earum eligendi non saepe soluta quia doloremque repellendus
-                veniam ratione minus harum officiis ipsam itaque quaerat
-                molestias, dolor omnis, assumenda eius. Lorem ipsum, dolor sit
-                amet consectetur adipisicing elit. Sed praesentium provident
-                dolorem voluptatem doloremque illum maxime, accusamus reiciendis
-                perferendis. Ipsa, labore officia voluptate ut eaque, aliquam
-                laudantium omnis voluptas laborum cumque consequuntur enim quae,
-                earum placeat dicta modi quibusdam dolores.
+                <TimeLine></TimeLine>
               </div>
 
               <div></div>
             </div>
           </Grid>
         </Grid>
-      </section>
-      <section className="snap-always section-two">
         <Grid container>
           <Grid item xs={12} md={6}>
             <div>
-              <h1 className=" about text-slate-400 ml-10 font-bold text">
+              <h1 className=" about text-slate-400  font-bold text ">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">3.</span>{" "}
-                About me
+                Professional History
               </h1>
               <div className="text-slate-400  mt-5 about-body">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-                earum eligendi non saepe soluta quia doloremque repellendus
-                veniam ratione minus harum officiis ipsam itaque quaerat
-                molestias, dolor omnis, assumenda eius.
+                <ol>
+                  <li>
+                    <h3 className=" text-slate-400  font-semiBold text ">
+                      <span className="text-red-400 sf-mono about-text">
+                        I.
+                      </span>{" "}
+                      ITC Infotech India LTD{" "}
+                      <span className="text-red-400 sf-mono float-right">
+                        Jan'21-present
+                      </span>
+                    </h3>
+                    <div className="text-slate-400 mt-5">
+                      <ul>
+                        <li>
+                          <p className=" text-slate-400 ml-5 ">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Assesing project requirements using Agile & Scrum
+                            principles related to the high -volume online
+                            service that helped priortize developing activities.
+                          </p>
+                        </li>
+                        <li>
+                          <p className=" text-slate-400 ml-5 ">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Conducting requirement gathering and validation as a
+                            part of collaboration for the high-profile external
+                            web that helped to address UI/UX parts of the system
+                            user's interface before active phase of development
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ol>
               </div>
 
               <div></div>
@@ -146,6 +172,7 @@ function App() {
           </Grid>
         </Grid>
       </section>
+      <section className="snap-always section-two p-10 m-10"></section>
     </div>
   );
 }

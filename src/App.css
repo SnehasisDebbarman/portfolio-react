@@ -20,6 +20,28 @@ body{
   min-height: 100vh;
   max-height: 100vh;
 }
+
+.vl {
+  margin-top: 5px;
+  border-left: 20px solid rgb(239, 68, 68);
+  height:10rem;
+}
+.email{
+  bottom: 1rem;
+  right: 3rem;
+  font-size: 0.8rem;
+  font-style: bold;
+
+  position: fixed;
+  color: rgb(211, 165, 165);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.email:hover{
+
+  color:whitesmoke;
+  
+}
 /* center text */
 .center{
   /* position: absolute; */
@@ -118,12 +140,12 @@ body{
   
 }
 .about-body{
-  margin-left: 5.5rem;
-  margin-right: 5.5rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
   
 }
 .images{
-  height: 4rem;
+  padding: 10px;
   width: 4rem;
 }
 /* .about-text{
@@ -151,6 +173,18 @@ body{
     padding: 0.5rem 0.75rem;
     font-size: 0.5rem;
   }
+  .about-body{
+    margin-left: 2.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 2.5rem;
+    
+  }
+  .images{
+    padding: 10px;
+    /* padding-top: 20px; */
+    width: 4rem;
+  }
+  
 }
 
 
