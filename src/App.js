@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import "./style.scss";
 import Nav from "./Nav";
 import "animate.css";
 // import Typing from "react-typing-animation";
@@ -167,6 +168,45 @@ function App() {
                 </ol>
               </div>
             </div>
+          </Grid>
+        </Grid>
+      </section>
+      <section className="section-51">
+        <Grid
+          container
+          style={{
+            padding: "100px",
+            background: "rgb(37, 24, 24)",
+            marginTop: "100px",
+          }}
+        >
+          <Grid item xs={12} md={4} className="footer-grid">
+            {" "}
+            <p className=" text-slate-400 ml-5 ">
+              <span className="text-red-400 sf-mono">
+                {" "}
+                <a href="mailto: snehasisdebbarman2016@gmail.com">
+                  Leave a Mail
+                </a>
+              </span>
+            </p>
+          </Grid>
+          <Grid item xs={12} md={4} className="footer-grid">
+            {" "}
+            <p className=" text-slate-400 ml-5 ">
+              <span className="text-red-400 sf-mono">
+                {" "}
+                <a href="./snehasis-resume_p.pdf" download>
+                  Download CV
+                </a>
+              </span>
+            </p>
+          </Grid>
+          <Grid item xs={12} md={4} className="footer-grid">
+            {" "}
+            <a href="tel:+919647149128" className=" text-slate-400 ml-5 ">
+              <span className="text-red-400 sf-mono">Give a Call</span>
+            </a>
           </Grid>
         </Grid>
       </section>
