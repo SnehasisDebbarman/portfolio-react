@@ -166,8 +166,6 @@ function App() {
                   </li>
                 </ol>
               </div>
-
-              <div></div>
             </div>
           </Grid>
         </Grid>
