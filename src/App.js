@@ -172,7 +172,7 @@ function App() {
           </Grid>
         </Grid>
       </section>
-      <section className="snap-always section-two p-10 m-10"></section>
+      {/* <section className="snap-always section-two p-10 m-10"></section> */}
     </div>
   );
 }
