@@ -60,7 +60,12 @@ function App() {
 
   return (
     <div className="snap-y snap-mandatory pt-24">
-      <img src={s} alt="slogo" style={style.slogo} className="slogo" />
+      <img
+        src={s}
+        alt="slogo"
+        style={style.slogo}
+        className="slogo  hover:scale-110 ease-in-out duration-300 "
+      />
       <a style={style.downCV} href="./snehasis-resume_p.pdf" download>
         <button className="dcv hover:bg-red-400 hover:text-slate-900">
           Download CV
@@ -124,8 +129,8 @@ function App() {
         <Grid container>
           <Grid item xs={12} md={6} data-aos="zoom-in-right">
             <div className="sm:pt-20">
-              <h2 className=" about text-slate-400  font-bold text ">
-                <span className="text-red-400 sf-mono about-text">1.</span>{" "}
+              <h2 className=" about text-slate-400  font-bold text hover:text-red-400 ">
+                <span className="text-red-400  sf-mono about-text ">1.</span>{" "}
                 About me
               </h2>
               <div className="text-slate-400  mt-5 about-body">
@@ -144,11 +149,15 @@ function App() {
             md={6}
             className="flex justify-items-center item-center"
           >
-            <img src={photograph} alt="potrait" className="photograph" />
+            <img
+              src={photograph}
+              alt="potrait"
+              className="photograph  hover:scale-105 ease-in-out duration-300 "
+            />
           </Grid>
           <Grid item xs={12} md={6} data-aos="zoom-in-left">
             <div>
-              <h2 className=" about text-slate-400 font-bold text">
+              <h2 className=" about text-slate-400 font-bold text hover:text-red-400 ">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">2.</span>{" "}
                 Education
@@ -164,7 +173,7 @@ function App() {
         <Grid container>
           <Grid item xs={12} md={6}>
             <div>
-              <h2 className=" about text-slate-400 mt-20 font-bold text ">
+              <h2 className=" about text-slate-400 mt-20 font-bold text hover:text-red-400 ">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">3.</span>{" "}
                 Professional History
@@ -211,7 +220,7 @@ function App() {
 
           <Grid item xs={12} md={6} data-aos="zoom-in-left">
             <div style={style.p50}>
-              <h2 className=" about text-slate-400 font-bold text">
+              <h2 className=" about text-slate-400 font-bold text hover:text-red-400 ">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">4.</span>{" "}
                 Personal Projects
@@ -255,7 +264,11 @@ function App() {
           </Grid>
           <Grid item xs={12} md={6}>
             <a href="https://snehasisdebbarman.github.io/ip-react/">
-              <img className="ipHolder" src={ipss} alt="ip" />
+              <img
+                className="ipHolder hover:scale-105 ease-in-out duration-300 "
+                src={ipss}
+                alt="ip"
+              />
             </a>
           </Grid>
           <Grid item xs={12} md={6}>
@@ -299,12 +312,16 @@ function App() {
           </Grid>
           <Grid item xs={12} md={6}>
             <a href="https://snehasisdebbarman.github.io/blogr/">
-              <img className="ipHolder" src={blogr} alt="blog" />
+              <img
+                className="ipHolder  hover:scale-105 ease-in-out duration-300 "
+                src={blogr}
+                alt="blog"
+              />
             </a>
           </Grid>
           <Grid item xs={12} md={6}>
             <div style={style.p100}>
-              <h2 className=" about text-slate-400 font-bold text">
+              <h2 className=" about text-slate-400 font-bold text hover:text-red-400 ">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">5.</span>{" "}
                 Skills
@@ -337,6 +354,7 @@ function App() {
               src={s}
               alt="slogo"
               style={{ width: "80px", paddingLeft: "10px" }}
+              className="hover:scale-110 ease-in-out duration-300"
             />
           </Grid>
           <Grid
@@ -349,7 +367,7 @@ function App() {
           >
             {" "}
             <p
-              className=" text-slate-400 ml-5 "
+              className=" text-slate-400 ml-5 hover:scale-110 ease-in-out duration-300 "
               style={{ display: "flex", gap: "10px" }}
             >
               <img src={github} style={{ width: "20px" }} alt="github" />
@@ -369,7 +387,7 @@ function App() {
           >
             {" "}
             <p
-              className=" text-slate-400 ml-5 "
+              className=" text-slate-400 ml-5 hover:scale-110 ease-in-out duration-300 "
               style={{ display: "flex", gap: "10px" }}
             >
               <img src={linkedin} style={{ width: "20px" }} alt="linkedin" />
@@ -391,7 +409,7 @@ function App() {
           >
             {" "}
             <p
-              className=" text-slate-400 ml-5 "
+              className=" text-slate-400 ml-5 hover:scale-110 ease-in-out duration-300 "
               style={{ display: "flex", gap: "10px" }}
             >
               <img src={mail} style={{ width: "20px" }} alt="mail" />
@@ -413,7 +431,7 @@ function App() {
           >
             {" "}
             <p
-              className=" text-slate-400 ml-5 "
+              className=" text-slate-400 ml-5 hover:scale-110 ease-in-out duration-300 "
               style={{ display: "flex", gap: "10px" }}
             >
               <img src={cvlogo} style={{ width: "20px" }} alt="cv" />
@@ -436,7 +454,7 @@ function App() {
             {" "}
             <a
               href="tel:+919647149128"
-              className=" text-slate-400 ml-5 "
+              className=" text-slate-400 ml-5 hover:scale-110 ease-in-out duration-300 "
               style={{ display: "flex", gap: "10px" }}
             >
               <img src={phlogo} style={{ width: "20px" }} alt="phone" />
