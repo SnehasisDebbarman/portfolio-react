@@ -18,17 +18,14 @@ import linkedin from "./logos/linkedin.svg";
 import s from "./logos/s.svg";
 import Skills from "./Skills";
 import SkillAnimation from "./SkillAnimate/SkillAnimation";
+import photograph from "./logos/my_picture.jpeg";
 function App() {
   const style = {
     slogo: {
-      // width: "70px",
       position: "absolute",
       left: "2rem",
       top: "2rem",
       zIndex: "5",
-      // "@media (max-width: 710px)": {
-      //   width: "40px",
-      // },
     },
     downCV: {
       width: "200px",
@@ -141,7 +138,9 @@ function App() {
             </div>
           </Grid>
           <Grid item xs={12} md={6} className=""></Grid>
-          <Grid item xs={12} md={6} />
+          <Grid item xs={12} md={6}>
+            <img src={photograph} alt="potrait" className="photograph" />
+          </Grid>
           <Grid item xs={12} md={6} data-aos="zoom-in-left">
             <div>
               <h2 className=" about text-slate-400 font-bold text">
