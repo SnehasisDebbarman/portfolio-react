@@ -66,7 +66,11 @@ function App() {
         style={style.slogo}
         className="slogo  hover:scale-110 ease-in-out duration-300 "
       />
-      <a style={style.downCV} href="./snehasis-resume_p.pdf" download>
+      <a
+        style={style.downCV}
+        href="./snehasis-resume_p.pdf"
+        download="snehasis-resume.pdf"
+      >
         <button className="dcv hover:bg-red-400 hover:text-slate-900">
           Download CV
         </button>
@@ -437,7 +441,10 @@ function App() {
               <img src={cvlogo} style={{ width: "20px" }} alt="cv" />
               <span className="text-red-400 sf-mono">
                 {" "}
-                <a href="./snehasis-resume_p.pdf" download>
+                <a
+                  href="./snehasis-resume_p.pdf"
+                  download="snehasis-resume.pdf"
+                >
                   Download CV
                 </a>
               </span>
