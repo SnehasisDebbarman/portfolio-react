@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio-react/static/css/main.877b847a.css",
-    "main.js": "/portfolio-react/static/js/main.53f77d6f.js",
+    "main.js": "/portfolio-react/static/js/main.b122dbb3.js",
     "static/js/787.aeca62f9.chunk.js": "/portfolio-react/static/js/787.aeca62f9.chunk.js",
     "static/media/ipss.png": "/portfolio-react/static/media/ipss.5497e50f8e94a344856c.png",
     "static/media/blogr.png": "/portfolio-react/static/media/blogr.d24b67f7ada4891133f7.png",
     "static/media/my_picture.jpeg": "/portfolio-react/static/media/my_picture.8d0ea1d8421b9f352616.jpeg",
+    "static/media/snehasisResume.pdf": "/portfolio-react/static/media/snehasisResume.8c5c3b40d66afb27c806.pdf",
     "static/media/react.png": "/portfolio-react/static/media/react.35639ed930462bfcd544.png",
     "static/media/css.png": "/portfolio-react/static/media/css.fca023f93f5fa58eb426.png",
     "static/media/js.png": "/portfolio-react/static/media/js.3dfb665e058d08c99f28.png",
@@ -18,11 +19,11 @@
     "static/media/mail.svg": "/portfolio-react/static/media/mail.9add8b0281bd7f7dca4b0dc41dfd5623.svg",
     "static/media/github.svg": "/portfolio-react/static/media/github.d991a7b3e33c75e6faef8684952ed10b.svg",
     "main.877b847a.css.map": "/portfolio-react/static/css/main.877b847a.css.map",
-    "main.53f77d6f.js.map": "/portfolio-react/static/js/main.53f77d6f.js.map",
+    "main.b122dbb3.js.map": "/portfolio-react/static/js/main.b122dbb3.js.map",
     "787.aeca62f9.chunk.js.map": "/portfolio-react/static/js/787.aeca62f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.877b847a.css",
-    "static/js/main.53f77d6f.js"
+    "static/js/main.b122dbb3.js"
   ]
 }
