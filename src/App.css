@@ -152,25 +152,32 @@ body{
 /* .about-text{
   
 } */
+.slogo{
+  width: 70px;
+  
+}
 
 @media screen and (max-width: 480px){
-/*   
+  .slogo{
+    width: 30px;
+  }
   .blob1{
     position: absolute;
-    height:30%;
-    width: 30%;
+    height:10rem;
+    width: 10rem;
   }
   .blob2{
     position: absolute;
-    height: 40%;
-    width: 40%;
-  } */
+    height: 20rem;
+    width: 20rem;
+  }
   .center{
     font-size: 0.7rem;
     margin-left: 0rem;
   }
   .dcv{
-    margin: 1rem;
+    right:0;
+    position: absolute; 
     padding: 0.5rem 0.75rem;
     font-size: 0.5rem;
   }

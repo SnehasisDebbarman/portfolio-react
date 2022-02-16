@@ -38,6 +38,9 @@ export default function CustomizedProgressBars() {
         <br />
         <div className="pt-1 text-slate-400 sf-mono ">Redux</div>
         <BorderLinearProgress variant="determinate" value={70} />
+        <br />
+        <div className="pt-1 text-slate-400 sf-mono ">Sharepoint Online</div>
+        <BorderLinearProgress variant="determinate" value={60} />
       </Box>
     </div>
   );

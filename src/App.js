@@ -21,11 +21,14 @@ import SkillAnimation from "./SkillAnimate/SkillAnimation";
 function App() {
   const style = {
     slogo: {
-      width: "70px",
+      // width: "70px",
       position: "absolute",
       left: "2rem",
       top: "2rem",
       zIndex: "5",
+      // "@media (max-width: 710px)": {
+      //   width: "40px",
+      // },
     },
     downCV: {
       width: "200px",
@@ -60,9 +63,11 @@ function App() {
 
   return (
     <div className="snap-y snap-mandatory pt-24">
-      <img src={s} alt="slogo" style={style.slogo} />
+      <img src={s} alt="slogo" style={style.slogo} className="slogo" />
       <a style={style.downCV} href="./snehasis-resume_p.pdf" download>
-        <button className="dcv hover:bg-red-500">Download CV</button>
+        <button className="dcv hover:bg-red-400 hover:text-slate-900">
+          Download CV
+        </button>
       </a>
       {/* <Nav className="" /> */}
       <span className=" flex email content-center">
@@ -119,11 +124,10 @@ function App() {
         </div>
       </section>
       <section className=" snap-always section-two mt-4 p-10">
-        <Grid container className="">
+        <Grid container>
           <Grid item xs={12} md={6} data-aos="zoom-in-right">
-            <div>
+            <div className="sm:pt-20">
               <h2 className=" about text-slate-400  font-bold text ">
-                {" "}
                 <span className="text-red-400 sf-mono about-text">1.</span>{" "}
                 About me
               </h2>
@@ -200,11 +204,7 @@ function App() {
             </div>
           </Grid>
           <Grid item xs={12} md={6} className=""></Grid>
-          <Grid item xs={12} md={6}>
-            <a href="https://snehasisdebbarman.github.io/ip-react/">
-              <img className="ipHolder" src={ipss} alt="ip" />
-            </a>
-          </Grid>
+
           <Grid item xs={12} md={6} data-aos="zoom-in-left">
             <div style={style.p50}>
               <h2 className=" about text-slate-400 font-bold text">
@@ -249,7 +249,11 @@ function App() {
               </div>
             </div>
           </Grid>
-
+          <Grid item xs={12} md={6}>
+            <a href="https://snehasisdebbarman.github.io/ip-react/">
+              <img className="ipHolder" src={ipss} alt="ip" />
+            </a>
+          </Grid>
           <Grid item xs={12} md={6}>
             <div style={style.p100}>
               <div className="text-slate-400  mt-5 about-body">
@@ -257,11 +261,11 @@ function App() {
                   <li>
                     <h3 className=" text-slate-400  font-semiBold text ">
                       <span className="text-red-400 sf-mono about-text">
-                        I.
+                        II.
                       </span>
-                      IP Address Tracker
+                      Resposive Blog Starting page using MUI and Tailwind CSS
                       <span className="text-red-400 sf-mono float-right">
-                        1 Jan'22 - 5 Jan'22
+                        10 Jan'22 - 15 Jan'22
                       </span>
                     </h3>
                     <div className="text-slate-400 mt-5">
@@ -269,10 +273,10 @@ function App() {
                         <li>
                           <p className=" text-slate-400 ml-5 ">
                             <span className="text-red-400 sf-mono">* </span>
-                            Worked on IP Address Tracker using
-                            ReactJS,Axios,Material UI Created and implemented a
-                            custom CSS grid system, with CSS media queries
-                            formobile responsiveness.
+                            Worked on Blog Starting page using ReactJS,Material
+                            UI,Taiwind CSS Created and implemented a custom CSS
+                            grid system, with CSS media queries for mobile
+                            responsiveness.
                           </p>
                         </li>
                         <li>
