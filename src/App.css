@@ -28,7 +28,7 @@ body{
 }
 .email{
   bottom: 1rem;
-  right: 3rem;
+  right: 1rem;
   font-size: 0.8rem;
   font-style: bold;
 
@@ -62,9 +62,6 @@ body{
 
 /* button */
 .dcv{
-  margin: 2rem;
-  position: absolute;
-  right: 0;
   background-color: #94a3b8;
   padding: 1rem 1.5rem;
   color: white;
@@ -136,12 +133,12 @@ body{
 .about{
   height: 100%;
   width: 100%;
-  font-size: 2rem;
+  font-size: 1.7rem;
   
 }
 .about-body{
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   
 }
 .images{
@@ -195,6 +192,20 @@ body{
   }
   
 }
+
+.ipHolder{
+  width: 80%;
+  margin: 4rem;
+  padding: 2rem;
+  border: 1px solid rgb(248,113,113);
+  
+}
+.ipHolder:hover{
+ cursor: pointer;
+ filter: brightness(110%);
+
+}
+
 
 
 /* animations */

@@ -11,21 +11,50 @@ import html from "./logos/html.png";
 import js from "./logos/js.png";
 import rt from "./logos/react.png";
 import TimeLine from "./TimeLine";
+import mail from "./logos/mail.svg";
+import phlogo from "./logos/phone.svg";
+import cvlogo from "./logos/cv.svg";
+import ipss from "./logos/ipss.png";
+import blogr from "./logos/blogr.png";
+import github from "./logos/github.svg";
+import linkedin from "./logos/linkedin.svg";
+import s from "./logos/s.svg";
 
 function App() {
   return (
-    <div className="snap-y snap-mandatory">
+    <div className="snap-y snap-mandatory pt-24">
+      <img
+        src={s}
+        alt="slogo"
+        style={{
+          width: "70px",
+          position: "absolute",
+          left: "2rem",
+          top: "2rem",
+          zIndex: "5",
+        }}
+      />
+      <a
+        style={{
+          width: "200px",
+          position: "absolute",
+          right: "2rem",
+          top: "2rem",
+          zIndex: "5",
+        }}
+        href="./snehasis-resume_p.pdf"
+        download
+      >
+        <button className="dcv hover:bg-red-500">Download CV</button>
+      </a>
       {/* <Nav className="" /> */}
       <span className=" flex email content-center">
         <a href="mailto: snehasisdebbarman2016@gmail.com">
           snehasisdebbarman2016@gmail.com
         </a>
       </span>
-      <section className=" snap-start snap-always p-10">
+      <section className=" snap-start snap-always pl-10">
         <div className="slate-300 full">
-          <a href="./snehasis-resume_p.pdf" download>
-            <button className="dcv hover:bg-red-500">Download CV</button>
-          </a>
           <Grid container spacing={2}>
             <Grid item xs={12} md={8} className="circle-text-container">
               <div className="main">
@@ -92,11 +121,11 @@ function App() {
         <Grid container className="">
           <Grid item xs={12} md={6} data-aos="zoom-in-right">
             <div>
-              <h1 className=" about text-slate-400  font-bold text ">
+              <h2 className=" about text-slate-400  font-bold text ">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">1.</span>{" "}
                 About me
-              </h1>
+              </h2>
               <div className="text-slate-400  mt-5 about-body">
                 Inventive frontend developer expertise in HTML, CSS,
                 Javascript/ES6/ES2017 , ReactJs,Redux with willingness to learn
@@ -110,11 +139,11 @@ function App() {
           <Grid item xs={12} md={6} />
           <Grid item xs={12} md={6} data-aos="zoom-in-left">
             <div>
-              <h1 className=" about text-slate-400 font-bold text">
+              <h2 className=" about text-slate-400 font-bold text">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">2.</span>{" "}
                 Education
-              </h1>
+              </h2>
               <div className="text-slate-400  mt-5 about-body">
                 <TimeLine></TimeLine>
               </div>
@@ -126,11 +155,11 @@ function App() {
         <Grid container>
           <Grid item xs={12} md={6}>
             <div>
-              <h1 className=" about text-slate-400  font-bold text ">
+              <h2 className=" about text-slate-400  font-bold text ">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">3.</span>{" "}
                 Professional History
-              </h1>
+              </h2>
               <div className="text-slate-400  mt-5 about-body">
                 <ol>
                   <li>
@@ -169,20 +198,150 @@ function App() {
               </div>
             </div>
           </Grid>
+          <Grid item xs={12} md={6} className=""></Grid>
+          <Grid item xs={12} md={6}>
+            <a href="https://snehasisdebbarman.github.io/ip-react/">
+              <img className="ipHolder" src={ipss} alt="ip" />
+            </a>
+          </Grid>
+          <Grid item xs={12} md={6} data-aos="zoom-in-left">
+            <div style={{ paddingTop: "50px" }}>
+              <h2 className=" about text-slate-400 font-bold text">
+                {" "}
+                <span className="text-red-400 sf-mono about-text">4.</span>{" "}
+                Personal Projects
+              </h2>
+              <div className="text-slate-400  mt-5 about-body">
+                <ol>
+                  <li>
+                    <h3 className=" text-slate-400  font-semiBold text ">
+                      <span className="text-red-400 sf-mono about-text">
+                        I.
+                      </span>
+                      IP Address Tracker
+                      <span className="text-red-400 sf-mono float-right">
+                        1 Jan'22 - 5 Jan'22
+                      </span>
+                    </h3>
+                    <div className="text-slate-400 mt-5">
+                      <ul>
+                        <li>
+                          <p className=" text-slate-400 ml-5 ">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Worked on IP Address Tracker using
+                            ReactJS,Axios,Material UI Created and implemented a
+                            custom CSS grid system, with CSS media queries
+                            formobile responsiveness.
+                          </p>
+                        </li>
+                        <li>
+                          <p className=" text-slate-400 ml-5 ">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Performed key role in the development process of UI
+                            portion of web application
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </Grid>
+
+          <Grid item xs={12} md={6}>
+            <div style={{ paddingTop: "100px" }}>
+              <div className="text-slate-400  mt-5 about-body">
+                <ol>
+                  <li>
+                    <h3 className=" text-slate-400  font-semiBold text ">
+                      <span className="text-red-400 sf-mono about-text">
+                        I.
+                      </span>
+                      IP Address Tracker
+                      <span className="text-red-400 sf-mono float-right">
+                        1 Jan'22 - 5 Jan'22
+                      </span>
+                    </h3>
+                    <div className="text-slate-400 mt-5">
+                      <ul>
+                        <li>
+                          <p className=" text-slate-400 ml-5 ">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Worked on IP Address Tracker using
+                            ReactJS,Axios,Material UI Created and implemented a
+                            custom CSS grid system, with CSS media queries
+                            formobile responsiveness.
+                          </p>
+                        </li>
+                        <li>
+                          <p className=" text-slate-400 ml-5 ">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Performed key role in the development process of UI
+                            portion of web application
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <a href="https://snehasisdebbarman.github.io/blogr/">
+              <img className="ipHolder" src={blogr} alt="blog" />
+            </a>
+          </Grid>
         </Grid>
       </section>
       <section className="section-51">
         <Grid
           container
           style={{
-            padding: "100px",
+            padding: "50px",
             background: "rgb(37, 24, 24)",
             marginTop: "100px",
           }}
         >
-          <Grid item xs={12} md={4} className="footer-grid">
+          <Grid item xs={12} md={2} className="footer-grid">
+            <img src={s} alt="slogo" style={{ width: "50px" }} />
+          </Grid>
+          <Grid item xs={12} md={2} className="footer-grid">
             {" "}
-            <p className=" text-slate-400 ml-5 ">
+            <p
+              className=" text-slate-400 ml-5 "
+              style={{ display: "flex", gap: "10px" }}
+            >
+              <img src={github} style={{ width: "20px" }} />
+              <span className="text-red-400 sf-mono">
+                {" "}
+                <a href="https://github.com/SnehasisDebbarman">Github</a>
+              </span>
+            </p>
+          </Grid>
+          <Grid item xs={12} md={2} className="footer-grid">
+            {" "}
+            <p
+              className=" text-slate-400 ml-5 "
+              style={{ display: "flex", gap: "10px" }}
+            >
+              <img src={linkedin} style={{ width: "20px" }} />
+              <span className="text-red-400 sf-mono">
+                {" "}
+                <a href="https://www.linkedin.com/in/snehasis-debbarman-19833b159/">
+                  Linkedin
+                </a>
+              </span>
+            </p>
+          </Grid>
+          <Grid item xs={12} md={2} className="footer-grid">
+            {" "}
+            <p
+              className=" text-slate-400 ml-5 "
+              style={{ display: "flex", gap: "10px" }}
+            >
+              <img src={mail} style={{ width: "20px" }} />
               <span className="text-red-400 sf-mono">
                 {" "}
                 <a href="mailto: snehasisdebbarman2016@gmail.com">
@@ -191,9 +350,13 @@ function App() {
               </span>
             </p>
           </Grid>
-          <Grid item xs={12} md={4} className="footer-grid">
+          <Grid item xs={12} md={2} className="footer-grid">
             {" "}
-            <p className=" text-slate-400 ml-5 ">
+            <p
+              className=" text-slate-400 ml-5 "
+              style={{ display: "flex", gap: "10px" }}
+            >
+              <img src={cvlogo} style={{ width: "20px" }} />
               <span className="text-red-400 sf-mono">
                 {" "}
                 <a href="./snehasis-resume_p.pdf" download>
@@ -202,9 +365,14 @@ function App() {
               </span>
             </p>
           </Grid>
-          <Grid item xs={12} md={4} className="footer-grid">
+          <Grid item xs={12} md={2} className="footer-grid">
             {" "}
-            <a href="tel:+919647149128" className=" text-slate-400 ml-5 ">
+            <a
+              href="tel:+919647149128"
+              className=" text-slate-400 ml-5 "
+              style={{ display: "flex", gap: "10px" }}
+            >
+              <img src={phlogo} style={{ width: "20px" }} />
               <span className="text-red-400 sf-mono">Give a Call</span>
             </a>
           </Grid>
