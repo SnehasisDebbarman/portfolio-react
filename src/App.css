@@ -69,6 +69,7 @@ body{
   border-radius: 5px;
 }
 .blob-container{
+  
   position: relative;
 }
 .blob1{
@@ -157,11 +158,16 @@ body{
   
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 800px){
   .slogo{
     width: 30px;
   }
+  .blob-container{
+    top:-10%;
+    left:50%;
+  }
   .blob1{
+    
     position: absolute;
     height:10rem;
     width: 10rem;
