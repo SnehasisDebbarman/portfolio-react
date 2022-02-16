@@ -163,7 +163,7 @@ body{
   height: 260px;
   width: 200px;
   margin: 20px 10rem;
-  filter: blur(1px);
+  filter: blur(0);
 
 }
 .photograph:hover{
@@ -172,7 +172,7 @@ body{
 
 @media screen and (max-width: 800px){
   .photograph{
-    margin: 10px 3rem;
+    margin: 10px auto;
   }
   .slogo{
     width: 30px;

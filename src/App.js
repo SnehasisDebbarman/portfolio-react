@@ -138,7 +138,12 @@ function App() {
             </div>
           </Grid>
           <Grid item xs={12} md={6} className=""></Grid>
-          <Grid item xs={12} md={6}>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            className="flex justify-items-center item-center"
+          >
             <img src={photograph} alt="potrait" className="photograph" />
           </Grid>
           <Grid item xs={12} md={6} data-aos="zoom-in-left">
@@ -159,7 +164,7 @@ function App() {
         <Grid container>
           <Grid item xs={12} md={6}>
             <div>
-              <h2 className=" about text-slate-400  font-bold text ">
+              <h2 className=" about text-slate-400 mt-20 font-bold text ">
                 {" "}
                 <span className="text-red-400 sf-mono about-text">3.</span>{" "}
                 Professional History
