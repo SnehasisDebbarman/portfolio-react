@@ -3,9 +3,9 @@ import "animate.css";
 // import Typing from "react-typing-animation";
 import Name from "./name";
 import { Grid } from "@mui/material";
-import Css from "./logos/css.png";
-import html from "./logos/html.png";
-import js from "./logos/js.png";
+import Css from "./logos/csssvg.svg";
+import html from "./logos/html5.svg";
+import js from "./logos/js_logo.svg";
 import rt from "./logos/react.png";
 import TimeLine from "./TimeLine";
 import mail from "./logos/mail.svg";
@@ -20,6 +20,14 @@ import Skills from "./Skills";
 import SkillAnimation from "./SkillAnimate/SkillAnimation";
 import photograph from "./logos/my_picture.jpeg";
 import myPdf from "./snehasisResume.pdf";
+import keep1 from "./logos/keep1.png";
+
+import axiosIcon from "./logos/axiosColor.svg";
+import firebaseIcon from "./logos/firebase.svg";
+import reactIcon from "./logos/reactColor.svg";
+import muiIcon from "./logos/mui.svg";
+import tailwindIcon from "./logos/tailsvg.svg";
+//import tailwindcss from "tailwindcss";
 function App() {
   const style = {
     slogo: {
@@ -89,29 +97,29 @@ function App() {
               <Grid container>
                 <Grid item xs={3}>
                   <img
-                    src={html}
-                    className="images animate__animated animate__fadeInLeft animate__delay-2s"
+                    src={tailwindIcon}
+                    className="images  animate__animated animate__fadeInLeft animate__delay-2s"
                     alt="skill Logo"
                   />
                 </Grid>
                 <Grid item xs={3}>
                   <img
                     src={Css}
-                    className="images animate__animated animate__fadeInLeft animate__delay-3s"
+                    className="images  animate__animated animate__fadeInLeft animate__delay-3s"
                     alt="skill Logo"
                   />
                 </Grid>
                 <Grid item xs={3}>
                   <img
-                    src={rt}
-                    className="images animate__animated animate__fadeInLeft animate__delay-4s"
+                    src={reactIcon}
+                    className="images  animate__animated animate__fadeInLeft animate__delay-4s"
                     alt="skill Logo"
                   />
                 </Grid>
                 <Grid item xs={3}>
                   <img
                     src={js}
-                    className="images animate__animated animate__fadeInLeft animate__delay-5s"
+                    className="images  animate__animated animate__fadeInLeft animate__delay-5s"
                     alt="skill Logo"
                   />
                 </Grid>
@@ -243,8 +251,8 @@ function App() {
                         <li>
                           <p className=" text-slate-400 ml-5 ">
                             <span className="text-red-400 sf-mono">* </span>
-                            Worked on IP Address Tracker using
-                            ReactJS,Axios,Material UI Created and implemented a
+                            Worked on IP Address Tracker using ReactJS, Axios,
+                            Material UI and leaflet Created and implemented a
                             custom CSS grid system, with CSS media queries
                             formobile responsiveness.
                           </p>
@@ -260,6 +268,45 @@ function App() {
                     </div>
                   </li>
                 </ol>
+                <div className="tools_grid p-16">
+                  <div class="flex flex-wrap -mx-2 overflow-hidden">
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={muiIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300   "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={reactIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300  "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={tailwindIcon}
+                        alt=""
+                        className="images  ease-in-out duration-300  hover:scale-105  "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={axiosIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300  "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </Grid>
@@ -269,6 +316,91 @@ function App() {
                 className="ipHolder hover:scale-105 ease-in-out duration-300 "
                 src={ipss}
                 alt="ip"
+              />
+            </a>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <div style={style.p100}>
+              <div className="text-slate-400  mt-5 about-body">
+                <ol>
+                  <li>
+                    <h3 className=" text-slate-400  font-semiBold text ">
+                      <span className="text-red-400 sf-mono about-text">
+                        II.
+                      </span>
+                      Google Keep Clone using React JS, Firebase and Tailwind
+                      CSS
+                      <span className="text-red-400 sf-mono float-right">
+                        Feb'22 - Feb'22
+                      </span>
+                    </h3>
+                    <div className="text-slate-400 mt-5">
+                      <ul>
+                        <li>
+                          <p className=" text-slate-400 ml-5 ">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Created Google Keep Clone using React , Firebase
+                            firestore , firebase Authentication and Tailwind CSS
+                          </p>
+                        </li>
+                        <li>
+                          <p className=" text-slate-400 ml-5 ">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Implemented CRUD operation in This project
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ol>
+                <div className="tools_grid p-16">
+                  <div class="flex flex-wrap -mx-2 overflow-hidden">
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={muiIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300   "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={reactIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300   "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={tailwindIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300  "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={firebaseIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300  "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <a href="https://snehasisdebbarman.github.io/google-keep-clone/">
+              <img
+                className="ipHolder  hover:scale-105 ease-in-out duration-300 "
+                src={keep1}
+                alt="keep"
               />
             </a>
           </Grid>
@@ -308,6 +440,45 @@ function App() {
                     </div>
                   </li>
                 </ol>
+                <div className="tools_grid p-16">
+                  <div class="flex flex-wrap -mx-2 overflow-hidden">
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={muiIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300  "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={reactIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300  "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={tailwindIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300   "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+
+                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                      <img
+                        src={axiosIcon}
+                        alt=""
+                        className="images hover:scale-125 ease-in-out duration-300   "
+                      />
+                      {/* <!-- Column Content --> */}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </Grid>
