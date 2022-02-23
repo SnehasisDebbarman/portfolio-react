@@ -44,7 +44,6 @@ function App() {
       alignItems: "center",
     },
     name: {
-      color: "rgb(87,115,255)",
       fontWeight: "800",
       marginLeft: "20px",
     },
@@ -93,7 +92,10 @@ function App() {
           alt="slogo"
           className="slogo  hover:scale-110 ease-in-out duration-300 "
         />
-        <h1 className="text-[12px] md:text-[30px] " style={style.name}>
+        <h1
+          className="text-[10px] md:text-[30px] text-red-400 hover:text-red-300 hover:scale-110 ease-in-out duration-300"
+          style={style.name}
+        >
           Snehasis Debbarman
         </h1>
       </div>
@@ -118,28 +120,44 @@ function App() {
               </div>
               <Name />
               <Grid container>
-                <Grid item xs={3} className="pt-28 md:pt-5">
+                <Grid
+                  item
+                  xs={3}
+                  className="pt-28 md:pt-5 hover:scale-110 ease-in-out duration-300"
+                >
                   <img
                     src={tailwindIcon}
                     className="images  animate__animated animate__fadeInLeft animate__delay-2s"
                     alt="skill Logo"
                   />
                 </Grid>
-                <Grid item xs={3} className="pt-28 md:pt-5">
+                <Grid
+                  item
+                  xs={3}
+                  className="pt-28 md:pt-5 hover:scale-110 ease-in-out duration-300"
+                >
                   <img
                     src={Css}
                     className="images  animate__animated animate__fadeInLeft animate__delay-3s"
                     alt="skill Logo"
                   />
                 </Grid>
-                <Grid item xs={3} className="pt-28 md:pt-5">
+                <Grid
+                  item
+                  xs={3}
+                  className="pt-28 md:pt-5 hover:scale-110 ease-in-out duration-300"
+                >
                   <img
                     src={reactIcon}
                     className="images  animate__animated animate__fadeInLeft animate__delay-4s"
                     alt="skill Logo"
                   />
                 </Grid>
-                <Grid item xs={3} className="pt-28 md:pt-5">
+                <Grid
+                  item
+                  xs={3}
+                  className="pt-28 md:pt-5 hover:scale-110 ease-in-out duration-300"
+                >
                   <img
                     src={js}
                     className="images  animate__animated animate__fadeInLeft animate__delay-5s"

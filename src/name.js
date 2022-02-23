@@ -11,14 +11,14 @@ function Name() {
   }, [count]);
   return (
     <div>
-      <div className="text-green-400 mx-16 mt-16 animate__animated animate__hinge animate__jackInTheBox ">
+      <div className="text-green-400 mx-12 mt-24 md:mt-[-80px] md:mb-12 flex animate__animated animate__hinge animate__jackInTheBox ">
         <div className="center">
-          <strong className="text-2xl sm:text-xl">
+          <strong className="text-xl md:text-3xl">
             Hello , I'm <br />
-            <strong className=" text-red-400 sf-mono text-4xl sm:text-2xl">
+            <strong className=" text-red-400 sf-mono text-2xl md:text-4xl">
               <Typist>Snehasis Debbarman.</Typist>
             </strong>
-            <div className="text-2xl h-20 sm:text-xl">
+            <div className="text-xl md:text-3xl h-20">
               {count ? (
                 <Typist avgTypingDelay={50} onTypingDone={() => setCount(0)}>
                   <span> I am A Software Developer</span>
