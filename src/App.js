@@ -1,5 +1,7 @@
 import "./App.css";
 import "animate.css";
+import "./lines.sass";
+import "./style.scss";
 // import Typing from "react-typing-animation";
 import Name from "./name";
 import { Grid } from "@mui/material";
@@ -27,6 +29,8 @@ import firebaseIcon from "./logos/firebase.svg";
 import reactIcon from "./logos/reactColor.svg";
 import muiIcon from "./logos/mui.svg";
 import tailwindIcon from "./logos/tailsvg.svg";
+import Moon from "../src/cssGalaxy/Moon";
+//import moon from "./logos/moon.svg";
 //import tailwindcss from "tailwindcss";
 function App() {
   const style = {
@@ -68,7 +72,12 @@ function App() {
   );
 
   return (
-    <div className="snap-y snap-mandatory pt-24">
+    <div className="snap-y snap-mandatory pt-24 overflow-hidden">
+      {/* <div id="stars-container">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </div> */}
       <img
         src={s}
         alt="slogo"
@@ -127,6 +136,7 @@ function App() {
             </Grid>
             <Grid item xs={12} md={4}>
               <div className="blob-container">
+                {/* <Moon className="blob1 " /> */}
                 {blob2}
                 {blob1()}
               </div>
@@ -150,21 +160,6 @@ function App() {
 
               <div></div>
             </div>
-          </Grid>
-          <Grid item xs={12} md={6} className=""></Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            className="flex justify-items-center item-center"
-          >
-            <img
-              src={photograph}
-              alt="potrait"
-              className="photograph  hover:scale-105 ease-in-out duration-300 "
-            />
-          </Grid>
-          <Grid item xs={12} md={6} data-aos="zoom-in-left">
             <div>
               <h2 className=" about text-slate-400 font-bold text hover:text-red-400 ">
                 {" "}
@@ -178,6 +173,27 @@ function App() {
               <div></div>
             </div>
           </Grid>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            className="flex justify-items-center items-center p-16"
+          >
+            <img
+              src={photograph}
+              alt="potrait"
+              className="photograph  hover:scale-105 ease-in-out duration-300 "
+            />
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            className="flex justify-items-center items-center p-16 relative"
+          >
+            {/* <img src={moon} alt="" /> */}
+          </Grid>
+          <Grid item xs={12} md={6} data-aos="zoom-in-left"></Grid>
         </Grid>
         <Grid container>
           <Grid item xs={12} md={6}>
@@ -268,9 +284,9 @@ function App() {
                     </div>
                   </li>
                 </ol>
-                <div className="tools_grid p-16">
-                  <div class="flex flex-wrap -mx-2 overflow-hidden">
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                <div className="tools_grid p-10 sm:p-2">
+                  <div className="flex flex-wrap -mx-2 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
                       <img
                         src={muiIcon}
                         alt=""
@@ -279,7 +295,7 @@ function App() {
                       {/* <!-- Column Content --> */}
                     </div>
 
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0  w-1/4 overflow-hidden">
                       <img
                         src={reactIcon}
                         alt=""
@@ -288,7 +304,7 @@ function App() {
                       {/* <!-- Column Content --> */}
                     </div>
 
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0  w-1/4 overflow-hidden">
                       <img
                         src={tailwindIcon}
                         alt=""
@@ -297,7 +313,7 @@ function App() {
                       {/* <!-- Column Content --> */}
                     </div>
 
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
                       <img
                         src={axiosIcon}
                         alt=""
@@ -353,9 +369,9 @@ function App() {
                     </div>
                   </li>
                 </ol>
-                <div className="tools_grid p-16">
-                  <div class="flex flex-wrap -mx-2 overflow-hidden">
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                <div className="tools_grid p-10 sm:p-2">
+                  <div className="flex flex-wrap -mx-2 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
                       <img
                         src={muiIcon}
                         alt=""
@@ -364,7 +380,7 @@ function App() {
                       {/* <!-- Column Content --> */}
                     </div>
 
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
                       <img
                         src={reactIcon}
                         alt=""
@@ -373,7 +389,7 @@ function App() {
                       {/* <!-- Column Content --> */}
                     </div>
 
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
                       <img
                         src={tailwindIcon}
                         alt=""
@@ -382,7 +398,7 @@ function App() {
                       {/* <!-- Column Content --> */}
                     </div>
 
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
                       <img
                         src={firebaseIcon}
                         alt=""
@@ -411,9 +427,9 @@ function App() {
                   <li>
                     <h3 className=" text-slate-400  font-semiBold text ">
                       <span className="text-red-400 sf-mono about-text">
-                        II.
+                        III.
                       </span>
-                      Resposive Blog Starting page using MUI and Tailwind CSS
+                      Resposive Blog Landing page using MUI and Tailwind CSS
                       <span className="text-red-400 sf-mono float-right">
                         10 Jan'22 - 15 Jan'22
                       </span>
@@ -440,9 +456,9 @@ function App() {
                     </div>
                   </li>
                 </ol>
-                <div className="tools_grid p-16">
-                  <div class="flex flex-wrap -mx-2 overflow-hidden">
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                <div className="tools_grid p-10 sm:p-2">
+                  <div className="flex flex-wrap -mx-2 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
                       <img
                         src={muiIcon}
                         alt=""
@@ -451,7 +467,7 @@ function App() {
                       {/* <!-- Column Content --> */}
                     </div>
 
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
                       <img
                         src={reactIcon}
                         alt=""
@@ -460,7 +476,7 @@ function App() {
                       {/* <!-- Column Content --> */}
                     </div>
 
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
                       <img
                         src={tailwindIcon}
                         alt=""
@@ -469,7 +485,7 @@ function App() {
                       {/* <!-- Column Content --> */}
                     </div>
 
-                    <div class="my-2 px-2 w-1/4 overflow-hidden">
+                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
                       <img
                         src={axiosIcon}
                         alt=""

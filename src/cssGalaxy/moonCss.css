@@ -1,0 +1,108 @@
+
+  .moon {
+    position: absolute;
+    left: 0%;
+    top: 30vh;
+    margin: -100px;
+    width: 200px;
+    height: 200px;
+    background: #c7cbd0;
+    border-radius: 50%;
+    box-shadow: inset -25px 0px 0 0px #9098a1;
+    /* transition: transform 0.2s ease-in-out; */
+    animation: coin-rotate 2s both infinite;
+  }
+  
+  /* .moon:hover {
+    transform: scale(1.2);
+  } */
+  
+  .moonScare {
+    position: absolute;
+    list-style: none;
+    background: #737277;
+    border-radius: 50%;
+  }
+  .moonScare:nth-child(1) {
+    left: 25px;
+    top: 60px;
+    width: 50px;
+    height: 50px;
+    box-shadow: inset 6px -2px 0 0px #414043;
+  }
+  .moonScare:nth-child(2) {
+    left: 150px;
+    top: 50px;
+    width: 25px;
+    height: 25px;
+    box-shadow: inset 3px -1px 0 0px #414043;
+  }
+  
+  .moonScare:nth-child(3) {
+    left: 100px;
+    top: 150px;
+    width: 25px;
+    height: 25px;
+    box-shadow: inset 3px -1px 0 0px #414043;
+  }
+  
+  .moonScare:nth-child(4) {
+    left: 50px;
+    top: 150px;
+    width: 12.5px;
+    height: 12.5px;
+    box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+  
+  .moonScare:nth-child(5) {
+    left: 87.5px;
+    top: 16.66666667px;
+    width: 12.5px;
+    height: 12.5px;
+    box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+  
+  .moonScare:nth-child(6) {
+    left: 114.28571429px;
+    top: 80px;
+    width: 12.5px;
+    height: 12.5px;
+    box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+  
+  .moonScare:nth-child(7) {
+    left: 181.81818182px;
+    top: 100px;
+    width: 12.5px;
+    height: 12.5px;
+    box-shadow: inset 2.4px -0.8px 0 0px #414043;
+  }
+  
+
+  @-webkit-keyframes planet-rotation {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: -200% 0%;
+    }
+}
+@keyframes planet-rotation {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: -200% 0%;
+    }
+}
+@keyframes coin-rotate {
+    0% {
+      transform: rotateY(0);
+    }
+    10% {
+      transform: rotateY(180deg);
+    }
+    500% {
+      transform: rotateY(0deg);
+    }
+  }

@@ -143,8 +143,18 @@ body{
   
 }
 .images{
-  padding: 15px;
+  padding: 20px;
+  width: 3rem;
+
+}
+.images:hover{
+  border-radius: 10px;
+}
+@media screen and (min-width:800px) {
+ .images{
+  padding: 10px;
   width: 4rem;
+ }
 }
 
 .section-51{
@@ -160,8 +170,8 @@ body{
 .photograph{
   border: 1px solid rgb(248,113,113);
   padding: 20px;
-  height: 260px;
-  width: 200px;
+  height: auto;
+  width: 40vh;
   margin: 20px 10rem;
   filter: blur(0);
 
@@ -229,6 +239,7 @@ body{
 .ipHolder:hover{
  cursor: pointer;
  filter: brightness(110%);
+ border-radius: 10px;
 
 }
 
