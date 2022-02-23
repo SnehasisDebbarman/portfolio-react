@@ -44,7 +44,7 @@ function App() {
       alignItems: "center",
     },
     name: {
-      color: "white",
+      color: "rgb(87,115,255)",
       fontWeight: "800",
       marginLeft: "20px",
     },

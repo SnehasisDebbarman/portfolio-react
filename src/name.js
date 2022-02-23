@@ -11,7 +11,7 @@ function Name() {
   }, [count]);
   return (
     <div>
-      <div className="text-green-400 m-16    animate__animated animate__hinge animate__jackInTheBox ">
+      <div className="text-green-400 mx-16 mt-16 animate__animated animate__hinge animate__jackInTheBox ">
         <div className="center">
           <strong className="text-2xl sm:text-xl">
             Hello , I'm <br />

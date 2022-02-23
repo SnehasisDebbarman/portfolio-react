@@ -124,6 +124,14 @@ body{
   margin:auto;
   animation: circle 12s linear infinite;
 }
+@media screen and (max-width:800px){
+  .main{
+    left:-35%;
+  }
+  .circle{
+
+  }
+}
 .section-two{
   min-height: 100vh;
   padding: 2rem;
