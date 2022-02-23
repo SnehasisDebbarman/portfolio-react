@@ -12,7 +12,7 @@ html, body {
 }
 
 body{
-  background-color: black;
+  background-color: rgb(7, 7, 7);
   overflow: hidden;
 }
 
@@ -27,6 +27,7 @@ body{
   height:10rem;
 }
 .email{
+  z-index: 3;
   bottom: 1rem;
   right: 1rem;
   font-size: 0.8rem;
@@ -182,6 +183,18 @@ body{
   
   transform: scale(1.2); */
 }
+.waves{
+  margin-top: -10px;
+  width: 100vw;
+
+  transform: scale(1.2);
+}
+@media screen and (max-width: 800px){
+  .waves{
+    height: 35vh;
+  }
+}
+
 
 @media screen and (max-width: 800px){
   .photograph{

@@ -32,6 +32,7 @@ import tailwindIcon from "./logos/tailsvg.svg";
 import Moon from "../src/cssGalaxy/Moon";
 //import moon from "./logos/moon.svg";
 //import tailwindcss from "tailwindcss";
+import wave from "./logos/wave.svg";
 function App() {
   const style = {
     slogo: {
@@ -39,7 +40,15 @@ function App() {
       left: "2rem",
       top: "2rem",
       zIndex: "5",
+      display: "flex",
+      alignItems: "center",
     },
+    name: {
+      color: "white",
+      fontWeight: "800",
+      marginLeft: "20px",
+    },
+
     downCV: {
       width: "200px",
       position: "absolute",
@@ -72,18 +81,23 @@ function App() {
   );
 
   return (
-    <div className="snap-y snap-mandatory pt-24 overflow-hidden">
-      {/* <div id="stars-container">
+    <div className="snap-y snap-mandatory pt-24 overflow-hidden ">
+      <div id="stars-container">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
-      </div> */}
-      <img
-        src={s}
-        alt="slogo"
-        style={style.slogo}
-        className="slogo  hover:scale-110 ease-in-out duration-300 "
-      />
+      </div>
+      <div style={style.slogo}>
+        <img
+          src={s}
+          alt="slogo"
+          className="slogo  hover:scale-110 ease-in-out duration-300 "
+        />
+        <h1 className="text-[12px] md:text-[30px] " style={style.name}>
+          Snehasis Debbarman
+        </h1>
+      </div>
+
       <a style={style.downCV} href={myPdf} download="snehasisResume.pdf">
         <button className="dcv hover:bg-red-400 hover:text-slate-900">
           Download CV
@@ -104,28 +118,28 @@ function App() {
               </div>
               <Name />
               <Grid container>
-                <Grid item xs={3}>
+                <Grid item xs={3} className="pt-28 md:pt-5">
                   <img
                     src={tailwindIcon}
                     className="images  animate__animated animate__fadeInLeft animate__delay-2s"
                     alt="skill Logo"
                   />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={3} className="pt-28 md:pt-5">
                   <img
                     src={Css}
                     className="images  animate__animated animate__fadeInLeft animate__delay-3s"
                     alt="skill Logo"
                   />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={3} className="pt-28 md:pt-5">
                   <img
                     src={reactIcon}
                     className="images  animate__animated animate__fadeInLeft animate__delay-4s"
                     alt="skill Logo"
                   />
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={3} className="pt-28 md:pt-5">
                   <img
                     src={js}
                     className="images  animate__animated animate__fadeInLeft animate__delay-5s"
@@ -134,25 +148,27 @@ function App() {
                 </Grid>
               </Grid>
             </Grid>
+
             <Grid item xs={12} md={4}>
               <div className="blob-container">
                 {/* <Moon className="blob1 " /> */}
-                {blob2}
-                {blob1()}
+                {/* {blob2}
+                {blob1()} */}
               </div>
             </Grid>
+            <img src={wave} style={{}} className="waves" alt="" />
           </Grid>
         </div>
       </section>
-      <section className=" snap-always section-two mt-4 p-10">
+      <section className=" snap-always section-two mt-4 ">
         <Grid container>
           <Grid item xs={12} md={6} data-aos="zoom-in-right">
-            <div className="sm:pt-20">
+            <div className="sm:pt-20 ">
               <h2 className=" about text-slate-400  font-bold text hover:text-red-400 ">
                 <span className="text-red-400  sf-mono about-text ">1.</span>{" "}
                 About me
               </h2>
-              <div className="text-slate-400  mt-5 about-body">
+              <div className="text-slate-400  mt-5 mb-20 about-body">
                 Inventive frontend developer expertise in HTML, CSS,
                 Javascript/ES6/ES2017 , ReactJs,Redux with willingness to learn
                 and master Back-end Development, Cloud and Web Server
