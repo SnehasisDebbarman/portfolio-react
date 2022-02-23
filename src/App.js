@@ -174,9 +174,9 @@ function App() {
                 {blob1()} */}
               </div>
             </Grid>
-            <img src={wave} style={{}} className="waves" alt="" />
           </Grid>
         </div>
+        <img src={wave} style={{}} className="waves" alt="" />
       </section>
       <section className=" snap-always section-two mt-4 ">
         <Grid container>

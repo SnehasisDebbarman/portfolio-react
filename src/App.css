@@ -201,14 +201,15 @@ body{
   transform: scale(1.2); */
 }
 .waves{
-  margin-top: -10px;
+  margin-top: -40vh;
   width: 100vw;
-
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 @media screen and (max-width: 800px){
   .waves{
-    height: 35vh;
+    margin-top: -20vh;
+    margin-bottom: 10vh;
+    
   }
 }
 
