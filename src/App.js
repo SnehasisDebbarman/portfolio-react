@@ -227,7 +227,12 @@ function App() {
           >
             {/* <img src={moon} alt="" /> */}
           </Grid>
-          <Grid item xs={12} md={6} data-aos="zoom-in-left"></Grid>
+          <Grid item xs={12} md={6}>
+            <div className="blobholder">
+              {blob2}
+              {blob1()}
+            </div>
+          </Grid>
         </Grid>
         <Grid container>
           <Grid item xs={12} md={6}>

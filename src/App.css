@@ -75,8 +75,8 @@ body{
 }
 .blob1{
   
-  height: 40rem;
-  width: 40rem;
+  height: 30rem;
+  width: 30rem;
   position: absolute;
   /* 
   right: 15rem; */
@@ -90,6 +90,15 @@ body{
   /* right: 20rem;
   top:1rem; */
   z-index: -1;
+}
+@media screen and (max-width:800px) {
+  .blob1{
+   display: none;
+  }
+  .blob2{
+    display: none;
+  }
+  
 }
 .loading {
   animation: rotation 15s infinite linear;
