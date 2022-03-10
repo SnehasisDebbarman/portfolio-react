@@ -156,16 +156,16 @@ function App() {
           snehasisdebbarman2016@gmail.com
         </a>
       </span>
-      <section className=" snap-start snap-always pl-10 pt-0 md:pt-0">
-        <div className="slate-300 full">
+      <section className=" snap-start snap-always pl-10">
+        <div className="slate-300 h-[100vh] flex">
           <Grid container spacing={2}>
             <Grid item xs={12} md={8} className="circle-text-container">
-              <div className="main">
+              {/* <div className="main">
                 <div className="circle"></div>
-              </div>
+              </div> */}
               <Name />
             </Grid>
-            <Grid container className="pt-24">
+            <Grid container className="pt-16">
               <Grid
                 item
                 xs={3}
