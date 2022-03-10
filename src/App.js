@@ -145,7 +145,7 @@ function App() {
         </a>
         <a href={myPdf} download="snehasisResume.pdf">
           {" "}
-          <button className="py-2 px-4  bg-red-400 text-slate-100 rounded-[5px] ">
+          <button className="py-2 px-4 text-bold bg-red-400 text-slate-100 rounded-[5px] ">
             Resume
           </button>
         </a>
@@ -156,7 +156,7 @@ function App() {
           snehasisdebbarman2016@gmail.com
         </a>
       </span>
-      <section className=" snap-start snap-always pl-10">
+      <section className=" snap-start snap-always pl-10 pt-0 md:pt-0">
         <div className="slate-300 full">
           <Grid container spacing={2}>
             <Grid item xs={12} md={8} className="circle-text-container">
@@ -164,51 +164,55 @@ function App() {
                 <div className="circle"></div>
               </div>
               <Name />
-              <Grid container>
-                <Grid
-                  item
-                  xs={3}
-                  className="pt-28 md:pt-5 hover:scale-110 ease-in-out duration-300"
-                >
-                  <img
-                    src={tailwindIcon}
-                    className="images  animate__animated animate__fadeInLeft animate__delay-2s"
-                    alt="skill Logo"
-                  />
-                </Grid>
-                <Grid
-                  item
-                  xs={3}
-                  className="pt-28 md:pt-5 hover:scale-110 ease-in-out duration-300"
-                >
-                  <img
-                    src={Css}
-                    className="images  animate__animated animate__fadeInLeft animate__delay-3s"
-                    alt="skill Logo"
-                  />
-                </Grid>
-                <Grid
-                  item
-                  xs={3}
-                  className="pt-28 md:pt-5 hover:scale-110 ease-in-out duration-300"
-                >
-                  <img
-                    src={reactIcon}
-                    className="images  animate__animated animate__fadeInLeft animate__delay-4s"
-                    alt="skill Logo"
-                  />
-                </Grid>
-                <Grid
-                  item
-                  xs={3}
-                  className="pt-28 md:pt-5 hover:scale-110 ease-in-out duration-300"
-                >
-                  <img
-                    src={js}
-                    className="images  animate__animated animate__fadeInLeft animate__delay-5s"
-                    alt="skill Logo"
-                  />
-                </Grid>
+            </Grid>
+            <Grid container className="pt-24">
+              <Grid
+                item
+                xs={3}
+                md={1}
+                className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
+              >
+                <img
+                  src={tailwindIcon}
+                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
+                  alt="skill Logo"
+                />
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                md={1}
+                className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
+              >
+                <img
+                  src={Css}
+                  className="images  animate__animated animate__fadeInLeft animate__delay-3s"
+                  alt="skill Logo"
+                />
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                md={1}
+                className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
+              >
+                <img
+                  src={reactIcon}
+                  className="images  animate__animated animate__fadeInLeft animate__delay-4s"
+                  alt="skill Logo"
+                />
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                md={1}
+                className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
+              >
+                <img
+                  src={js}
+                  className="images  animate__animated animate__fadeInLeft animate__delay-5s"
+                  alt="skill Logo"
+                />
               </Grid>
             </Grid>
 

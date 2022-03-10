@@ -1,8 +1,27 @@
 import React from "react";
+import Axios from "../logos/axiosColor.svg";
+import Firebase from "../logos/firebase.svg";
+import ReactI from "../logos/reactColor.svg";
+import Mui from "../logos/mui.svg";
+import Tailwind from "../logos/tailsvg.svg";
 
 export default function TailwindCard({ project }) {
+  function toolIcon(tool) {
+    switch (tool) {
+      case "React":
+        return ReactI;
+      case "Firebase":
+        return Firebase;
+      case "Tailwind":
+        return Tailwind;
+      case "Axios":
+        return Axios;
+      default:
+        break;
+    }
+  }
   return (
-    <div className="flex flex-col  max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 min-h-[60vh]  md:min-h-[70vh] hover:scale-105 transition duration-500 ease-in-out">
+    <div className="flex flex-col  max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 min-h-[60vh]  md:min-h-[77vh] hover:scale-105 transition duration-500 ease-in-out">
       <a>
         <img className="rounded-t-lg" src={project.image} alt="" />
       </a>
@@ -16,7 +35,7 @@ export default function TailwindCard({ project }) {
         </p>
         <a
           href={project.link}
-          className=" inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className=" inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-red-400 rounded-lg hover:bg-red-500 focus:ring-4 focus:ring-red-300 "
         >
           Link
           <svg
@@ -32,6 +51,13 @@ export default function TailwindCard({ project }) {
             ></path>
           </svg>
         </a>
+      </div>
+      <div class="px-6 pt-4 pb-2">
+        {project.tools.map((tool) => (
+          <span class="inline-block w-12 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+            <img src={toolIcon(tool)} alt="" srcset="" />
+          </span>
+        ))}
       </div>
     </div>
   );
