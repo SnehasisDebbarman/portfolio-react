@@ -12,14 +12,15 @@ html, body {
 }
 
 body{
-  background-color: rgb(7, 7, 7);
+  background-color: #041b2b;
   overflow: hidden;
 }
 
 .full{
   min-height: 100vh;
-  max-height: 100vh;
+ 
 }
+
 
 .vl {
   margin-top: 5px;
@@ -74,7 +75,7 @@ body{
   position: relative;
 }
 .blob1{
-  
+  overflow: hidden;
   height: 30rem;
   width: 30rem;
   position: absolute;
@@ -84,6 +85,7 @@ body{
   z-index: -1;
 }
 .blob2{
+  overflow: hidden;
   height: 20rem;
   width: 20rem;
   position: absolute;
@@ -91,13 +93,8 @@ body{
   top:1rem; */
   z-index: -1;
 }
-@media screen and (max-width:800px) {
-  .blob1{
-   display: none;
-  }
-  .blob2{
-    display: none;
-  }
+@media screen and (max-width:700px) {
+ 
   
 }
 .loading {
@@ -133,7 +130,7 @@ body{
   margin:auto;
   animation: circle 12s linear infinite;
 }
-@media screen and (max-width:800px){
+@media screen and (max-width:700px){
   .main{
     left:-25%;
   }
@@ -168,7 +165,10 @@ body{
 .images:hover{
   border-radius: 10px;
 }
-@media screen and (min-width:800px) {
+.section-51{
+ background: #03101a;
+}
+@media screen and (min-width:700px) {
  .images{
   padding: 10px;
   width: 4rem;
@@ -189,8 +189,8 @@ body{
   border: 1px solid rgb(248,113,113);
   padding: 20px;
   height: auto;
-  width: 40vh;
-  margin: 20px 10rem;
+  width: 30vh;
+  margin: auto;
   filter: blur(0);
 
 }
@@ -205,7 +205,12 @@ body{
   width: 100vw;
   transform: scale(1.5);
 }
-@media screen and (max-width: 800px){
+@media screen and (min-width:701px) and (max-width: 799px){
+  .waves{
+    display: none;
+  }
+}
+@media screen and (max-width: 700px){
   .waves{
     margin-top: -20vh;
     margin-bottom: 10vh;
@@ -214,7 +219,7 @@ body{
 }
 
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 700px){
   .photograph{
     margin: 10px auto;
   }
@@ -225,17 +230,7 @@ body{
     top:-10%;
     left:50%;
   }
-  .blob1{
-    
-    position: absolute;
-    height:10rem;
-    width: 10rem;
-  }
-  .blob2{
-    position: absolute;
-    height: 20rem;
-    width: 20rem;
-  }
+  
   .center{
     font-size: 0.7rem;
     margin-left: 0rem;

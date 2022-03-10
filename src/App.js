@@ -2,19 +2,22 @@ import "./App.css";
 import "animate.css";
 import "./lines.sass";
 import "./style.scss";
+
+import Bounce from "react-reveal/Bounce";
+import Zoom from "react-reveal/Zoom";
+import Slide from "react-reveal/Slide";
+import ScrollAnimation from "react-animate-on-scroll";
+
 // import Typing from "react-typing-animation";
 import Name from "./name";
 import { Grid } from "@mui/material";
 import Css from "./logos/csssvg.svg";
-import html from "./logos/html5.svg";
 import js from "./logos/js_logo.svg";
-import rt from "./logos/react.png";
 import TimeLine from "./TimeLine";
 import mail from "./logos/mail.svg";
 import phlogo from "./logos/phone.svg";
 import cvlogo from "./logos/cv.svg";
-import ipss from "./logos/ipss.png";
-import blogr from "./logos/blogr.png";
+
 import github from "./logos/github.svg";
 import linkedin from "./logos/linkedin.svg";
 import s from "./logos/s.svg";
@@ -22,7 +25,6 @@ import Skills from "./Skills";
 import SkillAnimation from "./SkillAnimate/SkillAnimation";
 import photograph from "./logos/my_picture.jpeg";
 import myPdf from "./snehasisResume.pdf";
-import keep1 from "./logos/keep1.png";
 
 import axiosIcon from "./logos/axiosColor.svg";
 import firebaseIcon from "./logos/firebase.svg";
@@ -32,7 +34,11 @@ import tailwindIcon from "./logos/tailsvg.svg";
 import Moon from "../src/cssGalaxy/Moon";
 //import moon from "./logos/moon.svg";
 //import tailwindcss from "tailwindcss";
-import wave from "./logos/wave.svg";
+
+import TailwindCard from "./TailwindCard/TailwindCard";
+import ProjectData from "./TailwindCard/ProjectData";
+//data
+
 function App() {
   const style = {
     slogo: {
@@ -49,7 +55,7 @@ function App() {
     },
 
     downCV: {
-      width: "200px",
+      width: "auto",
       position: "absolute",
       right: "2rem",
       top: "2rem",
@@ -59,7 +65,7 @@ function App() {
     p100: { paddingTop: "100px" },
     s51container: {
       padding: "50px",
-      background: "rgb(37, 24, 24)",
+      background: "#03101a",
       marginTop: "100px",
       rowGap: "20px",
       float: "left",
@@ -81,7 +87,9 @@ function App() {
 
   return (
     <div className="snap-y snap-mandatory pt-24 overflow-hidden ">
+      <div className="cover"></div>
       <div id="stars-container">
+        <div class="star"></div>
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
@@ -96,15 +104,52 @@ function App() {
           className="text-[10px] md:text-[30px] text-red-400 hover:text-red-300 hover:scale-110 ease-in-out duration-300"
           style={style.name}
         >
-          Snehasis Debbarman
+          <Bounce left cascade>
+            Snehasis Debbarman
+          </Bounce>
         </h1>
       </div>
 
-      <a style={style.downCV} href={myPdf} download="snehasisResume.pdf">
-        <button className="dcv hover:bg-red-400 hover:text-slate-900">
-          Download CV
-        </button>
-      </a>
+      <div style={style.downCV} className=" hidden lg:block">
+        <a
+          href="#about"
+          onClick={() => window.location.replace("/#about")}
+          className="text-red-400 py-2 px-4  "
+        >
+          {" "}
+          About Me
+        </a>
+        <a
+          href="#Work"
+          onClick={() => window.location.replace("/#work")}
+          className="text-red-400 py-2 px-4  "
+        >
+          {" "}
+          Work
+        </a>
+        <a
+          href="#projects"
+          onClick={() => window.location.replace("/#projects")}
+          className="text-red-400 py-2 px-4  "
+        >
+          {" "}
+          Projects
+        </a>
+        <a
+          href="#contact"
+          onClick={() => window.location.replace("/#contact")}
+          className="text-red-400 py-2 px-4  "
+        >
+          {" "}
+          Contact
+        </a>
+        <a href={myPdf} download="snehasisResume.pdf">
+          {" "}
+          <button className="py-2 px-4  bg-red-400 text-slate-100 rounded-[5px] ">
+            Resume
+          </button>
+        </a>
+      </div>
       {/* <Nav className="" /> */}
       <span className=" flex email content-center">
         <a href="mailto: snehasisdebbarman2016@gmail.com">
@@ -167,25 +212,29 @@ function App() {
               </Grid>
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            {/* <Grid item xs={12} md={4}>
               <div className="blob-container">
                 {/* <Moon className="blob1 " /> */}
-                {/* {blob2}
-                {blob1()} */}
+            {/* {blob2}
+                {blob1()} 
               </div>
-            </Grid>
+            </Grid> */}
           </Grid>
         </div>
-        <img src={wave} style={{}} className="waves" alt="" />
+        {/* <img src={wave} style={{}} className="waves" alt="" /> */}
       </section>
-      <section className=" snap-always section-two mt-4 ">
+      <section className=" snap-always section-two mt-4 " id="about">
         <Grid container>
+          <Grid item xs={12} className="pt-10">
+            <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
+              <span className="text-red-400  sf-mono about-text ">
+                1. About Me
+              </span>{" "}
+              <div class=" border-t border-slate-600 flex-grow opacity-50 ml-4 mr-10"></div>
+            </h2>
+          </Grid>
           <Grid item xs={12} md={6} data-aos="zoom-in-right">
             <div className="sm:pt-20 ">
-              <h2 className=" about text-slate-400  font-bold text hover:text-red-400 ">
-                <span className="text-red-400  sf-mono about-text ">1.</span>{" "}
-                About me
-              </h2>
               <div className="text-slate-400  mt-5 mb-20 about-body">
                 Inventive frontend developer expertise in HTML, CSS,
                 Javascript/ES6/ES2017 , ReactJs,Redux with willingness to learn
@@ -195,15 +244,7 @@ function App() {
               <div></div>
             </div>
             <div>
-              <h2 className=" about text-slate-400 font-bold text hover:text-red-400 ">
-                {" "}
-                <span className="text-red-400 sf-mono about-text">2.</span>{" "}
-                Education
-              </h2>
-              <div className="text-slate-400  mt-5 about-body">
-                <TimeLine></TimeLine>
-              </div>
-
+              <div className="text-slate-400  mt-5 about-body"></div>
               <div></div>
             </div>
           </Grid>
@@ -211,7 +252,7 @@ function App() {
             item
             xs={12}
             md={6}
-            className="flex justify-items-center items-center p-16"
+            className="flex justify-items-center items-center p-5"
           >
             <img
               src={photograph}
@@ -219,29 +260,29 @@ function App() {
               className="photograph  hover:scale-105 ease-in-out duration-300 "
             />
           </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            className="flex justify-items-center items-center p-16 relative"
-          >
-            {/* <img src={moon} alt="" /> */}
+          <Grid item xs={12} className="pt-10">
+            <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
+              <span className="text-red-400  sf-mono about-text ">
+                2. Educational History
+              </span>{" "}
+              <div class=" border-t border-slate-600 flex-grow opacity-50 ml-4 mr-10"></div>
+            </h2>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <div className="blobholder">
-              {blob2}
-              {blob1()}
-            </div>
+          <Grid item xs={12} className="pt-10 pl-20 flex  items-center">
+            <TimeLine></TimeLine>
           </Grid>
         </Grid>
         <Grid container>
-          <Grid item xs={12} md={6}>
+          <Grid item xs={12} className="pt-10" id={"work"}>
+            <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
+              <span className="text-red-400  sf-mono about-text ">
+                3. Professional History
+              </span>{" "}
+              <div class=" border-t border-slate-600 flex-grow opacity-50 ml-4 mr-10"></div>
+            </h2>
+          </Grid>
+          <Grid item xs={12}>
             <div>
-              <h2 className=" about text-slate-400 mt-20 font-bold text hover:text-red-400 ">
-                {" "}
-                <span className="text-red-400 sf-mono about-text">3.</span>{" "}
-                Professional History
-              </h2>
               <div className="text-slate-400  mt-5 about-body">
                 <ol>
                   <li>
@@ -281,278 +322,32 @@ function App() {
             </div>
           </Grid>
           <Grid item xs={12} md={6} className=""></Grid>
-
-          <Grid item xs={12} md={6} data-aos="zoom-in-left">
-            <div style={style.p50}>
-              <h2 className=" about text-slate-400 font-bold text hover:text-red-400 ">
-                {" "}
-                <span className="text-red-400 sf-mono about-text">4.</span>{" "}
-                Personal Projects
-              </h2>
-              <div className="text-slate-400  mt-5 about-body">
-                <ol>
-                  <li>
-                    <h3 className=" text-slate-400  font-semiBold text ">
-                      <span className="text-red-400 sf-mono about-text">
-                        I.
-                      </span>
-                      IP Address Tracker
-                      <span className="text-red-400 sf-mono float-right">
-                        1 Jan'22 - 5 Jan'22
-                      </span>
-                    </h3>
-                    <div className="text-slate-400 mt-5">
-                      <ul>
-                        <li>
-                          <p className=" text-slate-400 ml-5 ">
-                            <span className="text-red-400 sf-mono">* </span>
-                            Worked on IP Address Tracker using ReactJS, Axios,
-                            Material UI and leaflet Created and implemented a
-                            custom CSS grid system, with CSS media queries
-                            formobile responsiveness.
-                          </p>
-                        </li>
-                        <li>
-                          <p className=" text-slate-400 ml-5 ">
-                            <span className="text-red-400 sf-mono">* </span>
-                            Performed key role in the development process of UI
-                            portion of web application
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ol>
-                <div className="tools_grid p-10 sm:p-2">
-                  <div className="flex flex-wrap -mx-2 overflow-hidden">
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
-                      <img
-                        src={muiIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300   "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0  w-1/4 overflow-hidden">
-                      <img
-                        src={reactIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300  "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0  w-1/4 overflow-hidden">
-                      <img
-                        src={tailwindIcon}
-                        alt=""
-                        className="images  ease-in-out duration-300  hover:scale-105  "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
-                      <img
-                        src={axiosIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300  "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-                  </div>
+          <Grid item xs={12} className="pt-10" id="projects">
+            <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
+              <span className="text-red-400  sf-mono about-text ">
+                4. Personal Projects
+              </span>{" "}
+              <div class=" border-t border-slate-600 flex-grow opacity-50 ml-4 mr-10"></div>
+            </h2>
+          </Grid>
+          <Grid item xs={12} className="p-10 " id="projects">
+            <div className="flex flex-col md:flex-row gap-10">
+              {ProjectData.map((project) => (
+                <div>
+                  <TailwindCard project={project} />
                 </div>
-              </div>
+              ))}
             </div>
           </Grid>
-          <Grid item xs={12} md={6}>
-            <a href="https://snehasisdebbarman.github.io/ip-react/">
-              <img
-                className="ipHolder hover:scale-105 ease-in-out duration-300 "
-                src={ipss}
-                alt="ip"
-              />
-            </a>
+
+          <Grid item xs={12} className="pt-10">
+            <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
+              <span className="text-red-400  sf-mono  ">5. Skills</span>{" "}
+              <div class=" border-t border-slate-600 flex-grow opacity-50 ml-4 mr-10"></div>
+            </h2>
           </Grid>
           <Grid item xs={12} md={6}>
             <div style={style.p100}>
-              <div className="text-slate-400  mt-5 about-body">
-                <ol>
-                  <li>
-                    <h3 className=" text-slate-400  font-semiBold text ">
-                      <span className="text-red-400 sf-mono about-text">
-                        II.
-                      </span>
-                      Google Keep Clone using React JS, Firebase and Tailwind
-                      CSS
-                      <span className="text-red-400 sf-mono float-right">
-                        Feb'22 - Feb'22
-                      </span>
-                    </h3>
-                    <div className="text-slate-400 mt-5">
-                      <ul>
-                        <li>
-                          <p className=" text-slate-400 ml-5 ">
-                            <span className="text-red-400 sf-mono">* </span>
-                            Created Google Keep Clone using React , Firebase
-                            firestore , firebase Authentication and Tailwind CSS
-                          </p>
-                        </li>
-                        <li>
-                          <p className=" text-slate-400 ml-5 ">
-                            <span className="text-red-400 sf-mono">* </span>
-                            Implemented CRUD operation in This project
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ol>
-                <div className="tools_grid p-10 sm:p-2">
-                  <div className="flex flex-wrap -mx-2 overflow-hidden">
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
-                      <img
-                        src={muiIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300   "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
-                      <img
-                        src={reactIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300   "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
-                      <img
-                        src={tailwindIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300  "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
-                      <img
-                        src={firebaseIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300  "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <a href="https://snehasisdebbarman.github.io/google-keep-clone/">
-              <img
-                className="ipHolder  hover:scale-105 ease-in-out duration-300 "
-                src={keep1}
-                alt="keep"
-              />
-            </a>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <div style={style.p100}>
-              <div className="text-slate-400  mt-5 about-body">
-                <ol>
-                  <li>
-                    <h3 className=" text-slate-400  font-semiBold text ">
-                      <span className="text-red-400 sf-mono about-text">
-                        III.
-                      </span>
-                      Resposive Blog Landing page using MUI and Tailwind CSS
-                      <span className="text-red-400 sf-mono float-right">
-                        10 Jan'22 - 15 Jan'22
-                      </span>
-                    </h3>
-                    <div className="text-slate-400 mt-5">
-                      <ul>
-                        <li>
-                          <p className=" text-slate-400 ml-5 ">
-                            <span className="text-red-400 sf-mono">* </span>
-                            Worked on Blog Starting page using ReactJS,Material
-                            UI,Taiwind CSS Created and implemented a custom CSS
-                            grid system, with CSS media queries for mobile
-                            responsiveness.
-                          </p>
-                        </li>
-                        <li>
-                          <p className=" text-slate-400 ml-5 ">
-                            <span className="text-red-400 sf-mono">* </span>
-                            Performed key role in the development process of UI
-                            portion of web application
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ol>
-                <div className="tools_grid p-10 sm:p-2">
-                  <div className="flex flex-wrap -mx-2 overflow-hidden">
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
-                      <img
-                        src={muiIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300  "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
-                      <img
-                        src={reactIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300  "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
-                      <img
-                        src={tailwindIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300   "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-
-                    <div className=" my-2 px-2  sm:px-0 sm:my-0 w-1/4 overflow-hidden">
-                      <img
-                        src={axiosIcon}
-                        alt=""
-                        className="images hover:scale-125 ease-in-out duration-300   "
-                      />
-                      {/* <!-- Column Content --> */}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <a href="https://snehasisdebbarman.github.io/blogr/">
-              <img
-                className="ipHolder  hover:scale-105 ease-in-out duration-300 "
-                src={blogr}
-                alt="blog"
-              />
-            </a>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <div style={style.p100}>
-              <h2 className=" about text-slate-400 font-bold text hover:text-red-400 ">
-                {" "}
-                <span className="text-red-400 sf-mono about-text">5.</span>{" "}
-                Skills
-              </h2>
               <div className="text-slate-400  mt-5 about-body">
                 <Skills />
               </div>
@@ -563,7 +358,7 @@ function App() {
           </Grid>
         </Grid>
       </section>
-      <section className="section-51">
+      <section className="section-51" id="contact">
         <Grid
           container
           style={style.s51container}

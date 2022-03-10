@@ -62,24 +62,51 @@ body
 
 #stars-container
 {
-    top: 0;
-    position: absolute;
+  top: 0;
+  position: absolute;
   height: 100vh;
   width: 100%;
-  background: rgb(2,0,36);
-background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(28,28,28,1) 100%);
+  background-color: #7f5a83;
+  background-image:linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
   overflow: hidden;
   z-index: -3;
   @include translate50;
 }
-    
+.cover{
+  background: url(./logos/wave.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+}
+.star{
+  background-color: white;
+  width: 20px;
+  height: 2px;
+  position: absolute ;
+  top: 100px;
+  right: -10px;
+  animation: shoot 3s linear 10s infinite;
+  opacity: 0.5;
+  transform: rotate(-20deg);
+}
+@keyframes shoot{
+  10%{
+      transform: rotate(-20deg) translate(-10vw , 0);
+  }
+  100%{
+      transform: rotate(-20deg) translate(-100vw , 0);
+  }
+}
 #stars
 {
   width: 1px;
   height: 1px;
   background: transparent;
   box-shadow: $stars-small;
-  animation : animateStars 100s ease-in-out infinite;
+  animation : animateStars 200s ease-in-out infinite;
   @include roundedCorners;
 
   &::after
@@ -102,7 +129,7 @@ background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(28
   height: 2px;
   background: transparent;
   box-shadow: $stars-medium;
-  animation : animateStars 110s ease-in-out infinite;
+  animation : animateStars 300s ease-in-out infinite;
   @include roundedCorners;
     
   &::after
@@ -119,28 +146,28 @@ background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(28
   }
 }
     
-#stars3
-{
-  width: 3px;
-  height: 3px;
-  background: transparent;
-  box-shadow: $stars-big;
-  animation : animateStars 120s ease-in-out infinite;
-  @include roundedCorners;
+// #stars3
+// {
+//   width: 3px;
+//   height: 3px;
+//   background: transparent;
+//   box-shadow: $stars-big;
+//   animation : animateStars 120s ease-in-out infinite;
+//   @include roundedCorners;
     
-  &:after
-  {
-    content: " ";
-    position: absolute;
-    margin: auto;
-    top: 0; left: 0; right: 0; bottom: 0;
-    width: 3px;
-    height: 3px;
-    background: transparent;
-    box-shadow: $stars-big;
-    @include roundedCorners;
-  }
-}
+//   &:after
+//   {
+//     content: " ";
+//     position: absolute;
+//     margin: auto;
+//     top: 0; left: 0; right: 0; bottom: 0;
+//     width: 3px;
+//     height: 3px;
+//     background: transparent;
+//     box-shadow: $stars-big;
+//     @include roundedCorners;
+//   }
+// }
 
 @keyframes animateStars
 {
