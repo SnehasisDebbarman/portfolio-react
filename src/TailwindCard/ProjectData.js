@@ -9,7 +9,7 @@ let ProjectData = [
     tools: ["React", "Tailwind", "Axios"],
   },
   {
-    title: " Google Keep Clone using React JS, Firebase and Tailwind CSS",
+    title: " Google Keep Clone ",
     date: " Feb'22 - Feb'22",
     description:
       "Created Google Keep Clone using React , Firebase , firestore , firebase Authentication and Tailwind CSS",
@@ -18,7 +18,7 @@ let ProjectData = [
     tools: ["React", "Tailwind", "Axios", "Firebase"],
   },
   {
-    title: " Resposive Blog Landing page using MUI and Tailwind CSS",
+    title: "Blog Landing page ",
     date: "  10 Jan'22 - 15 Jan'22",
     description:
       " Worked on Blog Starting page using ReactJS,Material UI,Taiwind CSS Created and implemented a custom CSS grid system.",

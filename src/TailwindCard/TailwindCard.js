@@ -20,16 +20,16 @@ export default function TailwindCard({ project }) {
     }
   }
   return (
-    <div className="flex flex-col  max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 min-h-[60vh]  md:min-h-[70vh] hover:scale-105 transition duration-500 ease-in-out">
+    <div className="flex flex-col  max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 min-h-[60vh] md:min-h-[57vh] lg:min-h-[60vh] hover:scale-105 transition duration-500 ease-in-out">
       <a href="about">
         <img className="rounded-t-lg" src={project.image} alt="" />
       </a>
       <div className="p-5">
-        <h5 className="mb-2 md:text-xl font-bold tracking-tight text-gray-900 dark:text-white overflow-hidden text-ellipsis break-words">
+        <h5 className="mb-2 md:text-base font-bold tracking-tight text-gray-900 dark:text-white overflow-hidden text-ellipsis break-words">
           {project.title}
         </h5>
 
-        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <p className="mb-3 md:text-xs font-normal text-gray-700 dark:text-gray-400">
           {project.description}
         </p>
         <a
@@ -53,7 +53,7 @@ export default function TailwindCard({ project }) {
       </div>
       <div class="px-6 pt-4 pb-2">
         {project.tools.map((tool) => (
-          <span class="inline-block w-10 rounded-full px-2 py-1 text-sm font-semibold text-gray-700 mr-1 mb-2">
+          <span class="inline-block w-10 md:w-7 rounded-full px-2 py-1 text-sm font-semibold text-gray-700 mr-1 mb-2">
             <img src={toolIcon(tool)} alt="icons" />
           </span>
         ))}

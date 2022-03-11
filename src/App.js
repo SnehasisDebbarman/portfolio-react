@@ -37,9 +37,9 @@ const SkillIconGrid = ({ icon }) => {
   return (
     <Grid
       item
-      xs={3}
+      xs={1}
       md={1}
-      className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
+      className="md:pt-5 hover:scale-110 ease-in-out duration-300"
     >
       <img
         src={icon}
@@ -117,7 +117,7 @@ function App() {
         </h1>
       </div>
 
-      <div style={style.downCV} className=" hidden lg:block">
+      <div style={style.downCV} className=" hidden lg:block ">
         <a
           href="#about"
           onClick={() => window.location.replace("/#about")}
@@ -163,8 +163,8 @@ function App() {
           snehasisdebbarman2016@gmail.com
         </a>
       </span>
-      <section className=" snap-start snap-always pl-10">
-        <div className="slate-300 h-[100vh] flex ">
+      <section className=" snap-start snap-always pl-10 ">
+        <div className="h-[100vh] flex ">
           <Grid container spacing={2}>
             <Grid
               item
@@ -177,12 +177,11 @@ function App() {
               </div> */}
               <Name />
             </Grid>
-            <Grid container className="pt-16">
+            <Grid container className="pt-[30vh]">
               <Grid
                 item
-                xs={0}
-                md={2}
-                className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
+                xs={2}
+                className="md:pt-5 hover:scale-110 ease-in-out duration-300"
               ></Grid>
               {skillIconList.map((item) => (
                 <SkillIconGrid icon={item} />
@@ -191,7 +190,7 @@ function App() {
           </Grid>
         </div>
       </section>
-      <section className=" snap-always section-two mt-4 " id="about">
+      <section className=" snap-always section-two mt-4" id="about ">
         <Grid container>
           <Grid item xs={12} className="pt-10">
             <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
