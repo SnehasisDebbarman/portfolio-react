@@ -4,11 +4,7 @@ import "./lines.sass";
 import "./style.scss";
 
 import Bounce from "react-reveal/Bounce";
-import Zoom from "react-reveal/Zoom";
-import Slide from "react-reveal/Slide";
-import ScrollAnimation from "react-animate-on-scroll";
 
-// import Typing from "react-typing-animation";
 import Name from "./name";
 import { Grid } from "@mui/material";
 import Css from "./logos/csssvg.svg";
@@ -31,9 +27,7 @@ import firebaseIcon from "./logos/firebase.svg";
 import reactIcon from "./logos/reactColor.svg";
 import muiIcon from "./logos/mui.svg";
 import tailwindIcon from "./logos/tailsvg.svg";
-import Moon from "../src/cssGalaxy/Moon";
-//import moon from "./logos/moon.svg";
-//import tailwindcss from "tailwindcss";
+import reduxIcon from "./logos/redux.svg";
 
 import TailwindCard from "./TailwindCard/TailwindCard";
 import ProjectData from "./TailwindCard/ProjectData";
@@ -87,7 +81,7 @@ function App() {
 
   return (
     <div className="snap-y snap-mandatory pt-24 overflow-hidden ">
-      <div className="cover"></div>
+      <div className="cover top-0 h-[100vh] w-[100vw] absolute "></div>
       <div id="stars-container">
         <div class="star"></div>
         <div id="stars"></div>
@@ -98,7 +92,7 @@ function App() {
         <img
           src={s}
           alt="slogo"
-          className="slogo  hover:scale-110 ease-in-out duration-300 "
+          className="w-[40px] md:w-16   hover:scale-110 ease-in-out duration-300 "
         />
         <h1
           className="text-[10px] md:text-[30px] text-red-400 hover:text-red-300 hover:scale-110 ease-in-out duration-300"
@@ -151,21 +145,32 @@ function App() {
         </a>
       </div>
       {/* <Nav className="" /> */}
-      <span className=" flex email content-center">
+      <span className="email flex  content-center">
         <a href="mailto: snehasisdebbarman2016@gmail.com">
           snehasisdebbarman2016@gmail.com
         </a>
       </span>
       <section className=" snap-start snap-always pl-10">
-        <div className="slate-300 h-[100vh] flex">
+        <div className="slate-300 h-[100vh] flex ">
           <Grid container spacing={2}>
-            <Grid item xs={12} md={8} className="circle-text-container">
+            <Grid
+              item
+              xs={12}
+              md={12}
+              className="flex justify-center items-center h-[60vh]"
+            >
               {/* <div className="main">
                 <div className="circle"></div>
               </div> */}
               <Name />
             </Grid>
             <Grid container className="pt-16">
+              <Grid
+                item
+                xs={0}
+                md={2}
+                className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
+              ></Grid>
               <Grid
                 item
                 xs={3}
@@ -186,7 +191,7 @@ function App() {
               >
                 <img
                   src={Css}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-3s"
+                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
                   alt="skill Logo"
                 />
               </Grid>
@@ -198,7 +203,7 @@ function App() {
               >
                 <img
                   src={reactIcon}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-4s"
+                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
                   alt="skill Logo"
                 />
               </Grid>
@@ -210,8 +215,56 @@ function App() {
               >
                 <img
                   src={js}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-5s"
+                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
                   alt="skill Logo"
+                />
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                md={1}
+                className="md:pt-5 hover:scale-110 ease-in-out duration-300"
+              >
+                <img
+                  src={reduxIcon}
+                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
+                  alt="redux Logo"
+                />
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                md={1}
+                className=" md:pt-5 hover:scale-110 ease-in-out duration-300"
+              >
+                <img
+                  src={muiIcon}
+                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
+                  alt="mui Logo"
+                />
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                md={1}
+                className=" md:pt-5 hover:scale-110 ease-in-out duration-300"
+              >
+                <img
+                  src={axiosIcon}
+                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
+                  alt="axios Logo"
+                />
+              </Grid>
+              <Grid
+                item
+                xs={3}
+                md={1}
+                className=" md:pt-5 hover:scale-110 ease-in-out duration-300"
+              >
+                <img
+                  src={firebaseIcon}
+                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
+                  alt="firebase Logo"
                 />
               </Grid>
             </Grid>

@@ -76,10 +76,6 @@ body
   background: url(./logos/wave.svg);
   background-repeat: no-repeat;
   background-position: bottom;
-  position: absolute;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
 }
 .star{
   background-color: white;
@@ -88,7 +84,7 @@ body
   position: absolute ;
   top: 100px;
   right: -10px;
-  animation: shoot 3s linear 10s infinite;
+  animation: shoot 3s linear 30s infinite;
   opacity: 0.5;
   transform: rotate(-20deg);
 }
@@ -96,9 +92,12 @@ body
   10%{
       transform: rotate(-20deg) translate(-10vw , 0);
   }
-  100%{
+  30%{
       transform: rotate(-20deg) translate(-100vw , 0);
   }
+  100%{
+    transform: rotate(-20deg) translate(-100vw , 0);
+}
 }
 #stars
 {

@@ -44,19 +44,7 @@ body{
   
 }
 /* center text */
-.center{
-  /* position: absolute; */
-  /* top:50%;
-  left:50%; */
-  /* transform: translate(-60%,100%); */
-  /* width: 70%; */
-  margin-left: 9rem;
-  font-size: 2rem;
-  color: #94a3b8;
-  display: flex;
-  margin-top: 30%;
-  /* -webkit-text-stroke: 0.1px white; */
-}
+
 
 
 
@@ -102,10 +90,7 @@ body{
 
 
 
-.circle-text-container{
-  position: relative;
-  
-}
+
 .main{
   width:330px;
   height:330px;
@@ -180,10 +165,6 @@ body{
 /* .about-text{
   
 } */
-.slogo{
-  width: 70px;
-  
-}
 .photograph{
   border: 1px solid rgb(248,113,113);
   padding: 20px;
