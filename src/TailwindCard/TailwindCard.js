@@ -21,7 +21,7 @@ export default function TailwindCard({ project }) {
     }
   }
   return (
-    <div className="flex flex-col  max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 min-h-[60vh]  md:min-h-[77vh] hover:scale-105 transition duration-500 ease-in-out">
+    <div className="flex flex-col  max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 min-h-[60vh]  md:min-h-[70vh] hover:scale-105 transition duration-500 ease-in-out">
       <a>
         <img className="rounded-t-lg" src={project.image} alt="" />
       </a>
@@ -54,8 +54,8 @@ export default function TailwindCard({ project }) {
       </div>
       <div class="px-6 pt-4 pb-2">
         {project.tools.map((tool) => (
-          <span class="inline-block w-12 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            <img src={toolIcon(tool)} alt="" srcset="" />
+          <span class="inline-block w-10 rounded-full px-2 py-1 text-sm font-semibold text-gray-700 mr-1 mb-2">
+            <img src={toolIcon(tool)} alt="icons" />
           </span>
         ))}
       </div>

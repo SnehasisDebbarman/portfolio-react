@@ -7,8 +7,7 @@ import Bounce from "react-reveal/Bounce";
 
 import Name from "./name";
 import { Grid } from "@mui/material";
-import Css from "./logos/csssvg.svg";
-import js from "./logos/js_logo.svg";
+
 import TimeLine from "./TimeLine";
 import mail from "./logos/mail.svg";
 import phlogo from "./logos/phone.svg";
@@ -28,12 +27,39 @@ import reactIcon from "./logos/reactColor.svg";
 import muiIcon from "./logos/mui.svg";
 import tailwindIcon from "./logos/tailsvg.svg";
 import reduxIcon from "./logos/redux.svg";
+import Css from "./logos/csssvg.svg";
+import js from "./logos/js_logo.svg";
 
 import TailwindCard from "./TailwindCard/TailwindCard";
 import ProjectData from "./TailwindCard/ProjectData";
 //data
-
+const SkillIconGrid = ({ icon }) => {
+  return (
+    <Grid
+      item
+      xs={3}
+      md={1}
+      className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
+    >
+      <img
+        src={icon}
+        className="images  animate__animated animate__fadeInLeft animate__delay-2s"
+        alt="skill Logo"
+      />
+    </Grid>
+  );
+};
 function App() {
+  const skillIconList = [
+    reactIcon,
+    reduxIcon,
+    js,
+    Css,
+    firebaseIcon,
+    tailwindIcon,
+    axiosIcon,
+    muiIcon,
+  ];
   const style = {
     slogo: {
       position: "absolute",
@@ -171,114 +197,12 @@ function App() {
                 md={2}
                 className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
               ></Grid>
-              <Grid
-                item
-                xs={3}
-                md={1}
-                className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
-              >
-                <img
-                  src={tailwindIcon}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
-                  alt="skill Logo"
-                />
-              </Grid>
-              <Grid
-                item
-                xs={3}
-                md={1}
-                className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
-              >
-                <img
-                  src={Css}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
-                  alt="skill Logo"
-                />
-              </Grid>
-              <Grid
-                item
-                xs={3}
-                md={1}
-                className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
-              >
-                <img
-                  src={reactIcon}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
-                  alt="skill Logo"
-                />
-              </Grid>
-              <Grid
-                item
-                xs={3}
-                md={1}
-                className="pt-40 md:pt-5 hover:scale-110 ease-in-out duration-300"
-              >
-                <img
-                  src={js}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
-                  alt="skill Logo"
-                />
-              </Grid>
-              <Grid
-                item
-                xs={3}
-                md={1}
-                className="md:pt-5 hover:scale-110 ease-in-out duration-300"
-              >
-                <img
-                  src={reduxIcon}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
-                  alt="redux Logo"
-                />
-              </Grid>
-              <Grid
-                item
-                xs={3}
-                md={1}
-                className=" md:pt-5 hover:scale-110 ease-in-out duration-300"
-              >
-                <img
-                  src={muiIcon}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
-                  alt="mui Logo"
-                />
-              </Grid>
-              <Grid
-                item
-                xs={3}
-                md={1}
-                className=" md:pt-5 hover:scale-110 ease-in-out duration-300"
-              >
-                <img
-                  src={axiosIcon}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
-                  alt="axios Logo"
-                />
-              </Grid>
-              <Grid
-                item
-                xs={3}
-                md={1}
-                className=" md:pt-5 hover:scale-110 ease-in-out duration-300"
-              >
-                <img
-                  src={firebaseIcon}
-                  className="images  animate__animated animate__fadeInLeft animate__delay-2s"
-                  alt="firebase Logo"
-                />
-              </Grid>
+              {skillIconList.map((item) => (
+                <SkillIconGrid icon={item} />
+              ))}
             </Grid>
-
-            {/* <Grid item xs={12} md={4}>
-              <div className="blob-container">
-                {/* <Moon className="blob1 " /> */}
-            {/* {blob2}
-                {blob1()} 
-              </div>
-            </Grid> */}
           </Grid>
         </div>
-        {/* <img src={wave} style={{}} className="waves" alt="" /> */}
       </section>
       <section className=" snap-always section-two mt-4 " id="about">
         <Grid container>

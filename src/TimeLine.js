@@ -61,12 +61,8 @@ export default function VerticalLinearStepper() {
               </div>
             </StepLabel>
             <StepContent>
-              <Typography className="text-slate-500">
-                {step.description}
-              </Typography>
-              <Typography className="text-slate-500">
-                {step.institute}
-              </Typography>
+              <p className="text-slate-500 sf-mono ">{step.description}</p>
+              <p className="text-slate-500 sf-mono ">{step.institute}</p>
             </StepContent>
           </Step>
         ))}
