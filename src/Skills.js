@@ -1,23 +1,13 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
+
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import TreeView from "@mui/lab/TreeView";
 import TreeItem from "@mui/lab/TreeItem";
 
 export default function ControlledTreeView() {
-  const [expanded, setExpanded] = React.useState([
-    "1",
-    "2",
-    "3",
-    "4",
-    "5",
-    "6",
-    "7",
-    "8",
-    "9",
-  ]);
+  const expanded = ["1", "2", "3", "4"];
 
   return (
     <Box sx={{ flexGrow: 1, maxWidth: 400, overflowY: "auto" }}>

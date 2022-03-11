@@ -2,7 +2,6 @@ import React from "react";
 import Axios from "../logos/axiosColor.svg";
 import Firebase from "../logos/firebase.svg";
 import ReactI from "../logos/reactColor.svg";
-import Mui from "../logos/mui.svg";
 import Tailwind from "../logos/tailsvg.svg";
 
 export default function TailwindCard({ project }) {
@@ -22,7 +21,7 @@ export default function TailwindCard({ project }) {
   }
   return (
     <div className="flex flex-col  max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 min-h-[60vh]  md:min-h-[70vh] hover:scale-105 transition duration-500 ease-in-out">
-      <a>
+      <a href="about">
         <img className="rounded-t-lg" src={project.image} alt="" />
       </a>
       <div className="p-5">
