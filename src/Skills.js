@@ -38,9 +38,9 @@ export default function ControlledTreeView() {
             </div>
           }
         >
-          <TreeItem nodeId="2" label={<div>C</div>} />
-          <TreeItem nodeId="3" label={<div>Java</div>} />
-          <TreeItem nodeId="4" label={<div>Javascript</div>} />
+          <TreeItem nodeId="11" label={<div>C</div>} />
+          <TreeItem nodeId="12" label={<div>Java</div>} />
+          <TreeItem nodeId="13" label={<div>Javascript</div>} />
         </TreeItem>
         <TreeItem
           nodeId="2"
@@ -50,10 +50,11 @@ export default function ControlledTreeView() {
             </div>
           }
         >
-          <TreeItem nodeId="4" label={<div>React</div>} />
-          <TreeItem nodeId="3" label={<div>Redux</div>} />
-          <TreeItem nodeId="4" label={<div>TailWind CSS</div>} />
-          <TreeItem nodeId="4" label={<div>SCSS</div>} />
+          <TreeItem nodeId="21" label={<div>React</div>} />
+          <TreeItem nodeId="22" label={<div>Redux</div>} />
+          <TreeItem nodeId="23" label={<div>TailWind CSS</div>} />
+          <TreeItem nodeId="24" label={<div>SCSS</div>} />
+          <TreeItem nodeId="25" label={<div>Material UI</div>} />
         </TreeItem>
         <TreeItem
           nodeId="3"
@@ -63,20 +64,21 @@ export default function ControlledTreeView() {
             </div>
           }
         >
-          <TreeItem nodeId="6" label={<div>Firebase</div>}></TreeItem>
+          <TreeItem nodeId="31" label={<div>Firebase</div>}></TreeItem>
         </TreeItem>
         <TreeItem
-          nodeId="3"
+          nodeId="4"
           label={
             <div>
               <div className="text-red-400 sf-mono ">Tools</div>
             </div>
           }
         >
-          <TreeItem nodeId="6" label={<div>Sharepoint Online</div>}></TreeItem>
-          <TreeItem nodeId="6" label={<div>Git</div>}></TreeItem>
-          <TreeItem nodeId="6" label={<div>BitBucket</div>}></TreeItem>
-          <TreeItem nodeId="6" label={<div>Jira</div>}></TreeItem>
+          <TreeItem nodeId="41" label={<div>Sharepoint Online</div>}></TreeItem>
+          <TreeItem nodeId="42" label={<div>Git</div>}></TreeItem>
+          <TreeItem nodeId="43" label={<div>BitBucket</div>}></TreeItem>
+          <TreeItem nodeId="44" label={<div>Jira</div>}></TreeItem>
+          <TreeItem nodeId="45" label={<div>Azure DevOps</div>}></TreeItem>
         </TreeItem>
       </TreeView>
     </Box>

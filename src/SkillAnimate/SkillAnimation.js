@@ -10,13 +10,13 @@ import LinearProgress, {
 
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   height: 20,
-  borderRadius: 5,
+  borderRadius: 10,
   [`&.${linearProgressClasses.colorPrimary}`]: {
     backgroundColor:
       theme.palette.grey[theme.palette.mode === "light" ? 200 : 800],
   },
   [`& .${linearProgressClasses.bar}`]: {
-    borderRadius: 5,
+    borderRadius: 10,
     backgroundColor: "rgb(248,113,113)",
   },
 }));
