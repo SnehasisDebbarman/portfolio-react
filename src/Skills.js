@@ -41,10 +41,12 @@ export default function ControlledTreeView() {
           }
         >
           <TreeItem nodeId="21" label={<div>React</div>} />
-          <TreeItem nodeId="22" label={<div>Redux</div>} />
-          <TreeItem nodeId="23" label={<div>TailWind CSS</div>} />
-          <TreeItem nodeId="24" label={<div>SCSS</div>} />
-          <TreeItem nodeId="25" label={<div>Material UI</div>} />
+          <TreeItem nodeId="22" label={<div>React Native</div>} />
+          <TreeItem nodeId="23" label={<div>Expo</div>} />
+          <TreeItem nodeId="24" label={<div>Redux</div>} />
+          <TreeItem nodeId="25" label={<div>TailWind CSS</div>} />
+          <TreeItem nodeId="26" label={<div>SCSS</div>} />
+          <TreeItem nodeId="27" label={<div>Material UI</div>} />
         </TreeItem>
         <TreeItem
           nodeId="3"
@@ -64,11 +66,11 @@ export default function ControlledTreeView() {
             </div>
           }
         >
-          <TreeItem nodeId="41" label={<div>Sharepoint Online</div>}></TreeItem>
           <TreeItem nodeId="42" label={<div>Git</div>}></TreeItem>
           <TreeItem nodeId="43" label={<div>BitBucket</div>}></TreeItem>
           <TreeItem nodeId="44" label={<div>Jira</div>}></TreeItem>
           <TreeItem nodeId="45" label={<div>Azure DevOps</div>}></TreeItem>
+          <TreeItem nodeId="42" label={<div>Visual Studio Code</div>}></TreeItem>
         </TreeItem>
       </TreeView>
     </Box>

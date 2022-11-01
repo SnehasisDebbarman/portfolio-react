@@ -259,7 +259,7 @@ function App() {
                       </span>{" "}
                       ITC Infotech India LTD{" "}
                       <span className="text-red-400 sf-mono float-right">
-                        Jan'21-present
+                        Jan'21-May'22
                       </span>
                     </h3>
                     <div className="text-slate-400 mt-5">
@@ -279,6 +279,41 @@ function App() {
                             part of collaboration for the high-profile external
                             web that helped to address UI/UX parts of the system
                             user's interface before active phase of development
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+              <div className="text-slate-400  mt-5 about-body">
+                <ol>
+                  <li>
+                    <h3 className=" text-slate-400  font-semiBold text ">
+                      <span className="text-red-400 sf-mono about-text">
+                        II.
+                      </span>{" "}
+                      Fyllo by Agrihawk Technologies LTD.{" "}
+                      <span className="text-red-400 sf-mono float-right">
+                        May'22-present
+                      </span>
+                    </h3>
+                    <div className="text-slate-400 mt-5">
+                      <ul>
+                        <li>
+                          <p className=" text-slate-400 ml-5 ">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Developing and maintaining the front-end of the
+                            application using ReactJs,React Native, HTML, CSS,
+                            Javascript/ES6/ES2017.
+                          </p>
+                        </li>
+                        <li>
+                          <p className=" text-slate-400 ml-5 ">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Maintaining and developing new Features the Fyllo
+                            Farmer's app using Expo, ReactJs, React Native,
+                            HTML, CSS, Javascript/ES6/ES2017.
                           </p>
                         </li>
                       </ul>
