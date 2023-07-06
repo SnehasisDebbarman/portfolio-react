@@ -39,11 +39,11 @@ const SkillIconGrid = ({ icon }) => {
       item
       xs={1}
       md={1}
-      className="md:pt-5 hover:scale-110 ease-in-out duration-300"
+      className="duration-300 ease-in-out md:pt-5 hover:scale-110"
     >
       <img
         src={icon}
-        className="images  animate__animated animate__fadeInLeft animate__delay-2s"
+        className="images animate__animated animate__fadeInLeft animate__delay-2s"
         alt="skill Logo"
       />
     </Grid>
@@ -62,7 +62,7 @@ function App() {
   ];
   const style = {
     slogo: {
-      position: "absolute",
+      position: "fixed",
       left: "2rem",
       top: "2rem",
       zIndex: "5",
@@ -76,7 +76,7 @@ function App() {
 
     downCV: {
       width: "auto",
-      position: "absolute",
+      position: "fixed",
       right: "2rem",
       top: "2rem",
       zIndex: "5",
@@ -93,7 +93,7 @@ function App() {
   };
 
   return (
-    <div className="snap-y snap-mandatory pt-24 overflow-hidden ">
+    <div className="pt-24 overflow-hidden snap-y snap-mandatory ">
       <div className="cover top-0 h-[100vh] w-[100vw] absolute "></div>
       <div id="stars-container">
         <div class="star"></div>
@@ -101,69 +101,72 @@ function App() {
         <div id="stars2"></div>
         <div id="stars3"></div>
       </div>
-      <div style={style.slogo}>
-        <img
-          src={s}
-          alt="slogo"
-          className="w-[40px] md:w-16   hover:scale-110 ease-in-out duration-300 "
-        />
-        <h1
-          className="text-[10px] md:text-[30px] text-red-400 hover:text-red-300 hover:scale-110 ease-in-out duration-300"
-          style={style.name}
-        >
-          <Bounce left cascade>
-            Snehasis Debbarman
-          </Bounce>
-        </h1>
+      <div>
+        <div style={style.slogo}>
+          <img
+            src={s}
+            alt="slogo"
+            className="w-[40px] md:w-16   hover:scale-110 ease-in-out duration-300 "
+          />
+          <h1
+            className="text-[10px] md:text-[30px] text-red-400 hover:text-red-300 hover:scale-110 ease-in-out duration-300"
+            style={style.name}
+          >
+            <Bounce left cascade>
+              Snehasis Debbarman
+            </Bounce>
+          </h1>
+        </div>
+
+        <div style={style.downCV} className="hidden lg:block">
+          <a
+            href="#about"
+            // onClick={() => window.location.replace("#about")}
+            className="px-4 py-2 text-red-400 "
+          >
+            {" "}
+            About Me
+          </a>
+          <a
+            href="#work"
+            // onClick={() => window.location.replace("#work")}
+            className="px-4 py-2 text-red-400 "
+          >
+            {" "}
+            Work
+          </a>
+          <a
+            href="#projects"
+            // onClick={() => window.location.replace("#projects")}
+            className="px-4 py-2 text-red-400 "
+          >
+            {" "}
+            Projects
+          </a>
+          <a
+            href="#contact"
+            // onClick={() => window.location.replace("#contact")}
+            className="px-4 py-2 text-red-400 "
+          >
+            {" "}
+            Contact
+          </a>
+          <a href={myPdf} download="snehasisResume.pdf">
+            {" "}
+            <button className="py-2 px-4 text-bold bg-red-400 text-slate-100 rounded-[5px] ">
+              Resume
+            </button>
+          </a>
+        </div>
       </div>
 
-      <div style={style.downCV} className=" hidden lg:block ">
-        <a
-          href="#about"
-          onClick={() => window.location.replace("/#about")}
-          className="text-red-400 py-2 px-4  "
-        >
-          {" "}
-          About Me
-        </a>
-        <a
-          href="#Work"
-          onClick={() => window.location.replace("/#work")}
-          className="text-red-400 py-2 px-4  "
-        >
-          {" "}
-          Work
-        </a>
-        <a
-          href="#projects"
-          onClick={() => window.location.replace("/#projects")}
-          className="text-red-400 py-2 px-4  "
-        >
-          {" "}
-          Projects
-        </a>
-        <a
-          href="#contact"
-          onClick={() => window.location.replace("/#contact")}
-          className="text-red-400 py-2 px-4  "
-        >
-          {" "}
-          Contact
-        </a>
-        <a href={myPdf} download="snehasisResume.pdf">
-          {" "}
-          <button className="py-2 px-4 text-bold bg-red-400 text-slate-100 rounded-[5px] ">
-            Resume
-          </button>
-        </a>
-      </div>
       {/* <Nav className="" /> */}
-      <span className="email flex  content-center">
+      <span className="flex content-center email">
         <a href="mailto: snehasisdebbarman2016@gmail.com">
           snehasisdebbarman2016@gmail.com
         </a>
       </span>
-      <section className=" snap-start snap-always pl-10 ">
+      <section className="pl-10 snap-start snap-always">
         <div className="h-[100vh] flex ">
           <Grid container spacing={2}>
             <Grid
@@ -181,7 +184,7 @@ function App() {
               <Grid
                 item
                 xs={2}
-                className="md:pt-5 hover:scale-110 ease-in-out duration-300"
+                className="duration-300 ease-in-out md:pt-5 hover:scale-110"
               ></Grid>
               {skillIconList.map((item) => (
                 <SkillIconGrid icon={item} />
@@ -190,11 +193,11 @@ function App() {
           </Grid>
         </div>
       </section>
-      <section className=" snap-always section-two mt-4" id="about ">
+      <section className="mt-4 snap-always section-two" id="about">
         <Grid container>
           <Grid item xs={12} className="pt-10">
-            <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
-              <span className="text-red-400  sf-mono about-text ">
+            <h2 className="flex flex-row items-center justify-center font-bold text-red-400 about text">
+              <span className="text-red-400 sf-mono about-text ">
                 1. About Me
               </span>{" "}
               <div class=" border-t border-slate-600 flex-grow opacity-50 ml-4 mr-10"></div>
@@ -202,7 +205,7 @@ function App() {
           </Grid>
           <Grid item xs={12} md={6} data-aos="zoom-in-right">
             <div className="sm:pt-20 ">
-              <div className="text-slate-400  mt-5 mb-20 about-body">
+              <div className="mt-5 mb-20 text-slate-400 about-body">
                 Inventive frontend developer expertise in HTML, CSS,
                 Javascript/ES6/ES2017 , ReactJs,Redux with willingness to learn
                 and master Back-end Development, Cloud and Web Server
@@ -211,7 +214,7 @@ function App() {
               <div></div>
             </div>
             <div>
-              <div className="text-slate-400  mt-5 about-body"></div>
+              <div className="mt-5 text-slate-400 about-body"></div>
               <div></div>
             </div>
           </Grid>
@@ -219,30 +222,30 @@ function App() {
             item
             xs={12}
             md={6}
-            className="flex justify-items-center items-center p-5"
+            className="flex items-center p-5 justify-items-center"
           >
             <img
               src={photograph}
               alt="potrait"
-              className="photograph  hover:scale-105 ease-in-out duration-300 "
+              className="duration-300 ease-in-out photograph hover:scale-105 "
             />
           </Grid>
           <Grid item xs={12} className="pt-10">
-            <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
-              <span className="text-red-400  sf-mono about-text ">
+            <h2 className="flex flex-row items-center justify-center font-bold text-red-400 about text">
+              <span className="text-red-400 sf-mono about-text ">
                 2. Educational History
               </span>{" "}
               <div class=" border-t border-slate-600 flex-grow opacity-50 ml-4 mr-10"></div>
             </h2>
           </Grid>
-          <Grid item xs={12} className="pt-10 pl-20 flex  items-center">
+          <Grid item xs={12} className="flex items-center pt-10 pl-20">
             <TimeLine></TimeLine>
           </Grid>
         </Grid>
-        <Grid container>
-          <Grid item xs={12} className="pt-10" id={"work"}>
-            <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
-              <span className="text-red-400  sf-mono about-text ">
+        <Grid container id="work">
+          <Grid item xs={12} className="pt-10">
+            <h2 className="flex flex-row items-center justify-center font-bold text-red-400 about text">
+              <span className="text-red-400 sf-mono about-text ">
                 3. Professional History
               </span>{" "}
               <div class=" border-t border-slate-600 flex-grow opacity-50 ml-4 mr-10"></div>
@@ -250,22 +253,22 @@ function App() {
           </Grid>
           <Grid item xs={12}>
             <div>
-              <div className="text-slate-400  mt-5 about-body">
+              <div className="mt-5 text-slate-400 about-body">
                 <ol>
                   <li>
-                    <h3 className=" text-slate-400  font-semiBold text ">
+                    <h3 className=" text-slate-400 font-semiBold text">
                       <span className="text-red-400 sf-mono about-text">
                         I.
                       </span>{" "}
                       ITC Infotech India LTD{" "}
-                      <span className="text-red-400 sf-mono float-right">
+                      <span className="float-right text-red-400 sf-mono">
                         Jan'21-May'22
                       </span>
                     </h3>
-                    <div className="text-slate-400 mt-5">
+                    <div className="mt-5 text-slate-400">
                       <ul>
                         <li>
-                          <p className=" text-slate-400 ml-5 ">
+                          <p className="ml-5 text-slate-400">
                             <span className="text-red-400 sf-mono">* </span>
                             Assesing project requirements using Agile & Scrum
                             principles related to the high -volume online
@@ -273,7 +276,7 @@ function App() {
                           </p>
                         </li>
                         <li>
-                          <p className=" text-slate-400 ml-5 ">
+                          <p className="ml-5 text-slate-400">
                             <span className="text-red-400 sf-mono">* </span>
                             Conducting requirement gathering and validation as a
                             part of collaboration for the high-profile external
@@ -286,22 +289,22 @@ function App() {
                   </li>
                 </ol>
               </div>
-              <div className="text-slate-400  mt-5 about-body">
+              <div className="mt-5 text-slate-400 about-body">
                 <ol>
                   <li>
-                    <h3 className=" text-slate-400  font-semiBold text ">
+                    <h3 className=" text-slate-400 font-semiBold text">
                       <span className="text-red-400 sf-mono about-text">
                         II.
                       </span>{" "}
                       Fyllo by Agrihawk Technologies LTD.{" "}
-                      <span className="text-red-400 sf-mono float-right">
+                      <span className="float-right text-red-400 sf-mono">
                         May'22-present
                       </span>
                     </h3>
-                    <div className="text-slate-400 mt-5">
+                    <div className="mt-5 text-slate-400">
                       <ul>
                         <li>
-                          <p className=" text-slate-400 ml-5 ">
+                          <p className="ml-5 text-slate-400">
                             <span className="text-red-400 sf-mono">* </span>
                             Developing and maintaining the front-end of the
                             application using ReactJs,React Native, HTML, CSS,
@@ -309,7 +312,7 @@ function App() {
                           </p>
                         </li>
                         <li>
-                          <p className=" text-slate-400 ml-5 ">
+                          <p className="ml-5 text-slate-400">
                             <span className="text-red-400 sf-mono">* </span>
                             Maintaining and developing new Features the Fyllo
                             Farmer's app using Expo, ReactJs, React Native,
@@ -325,15 +328,15 @@ function App() {
           </Grid>
           <Grid item xs={12} md={6} className=""></Grid>
           <Grid item xs={12} className="pt-10" id="projects">
-            <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
-              <span className="text-red-400  sf-mono about-text ">
+            <h2 className="flex flex-row items-center justify-center font-bold text-red-400 about text">
+              <span className="text-red-400 sf-mono about-text ">
                 4. Personal Projects
               </span>{" "}
               <div class=" border-t border-slate-600 flex-grow opacity-50 ml-4 mr-10"></div>
             </h2>
           </Grid>
           <Grid item xs={12} className="p-10 " id="projects">
-            <div className="flex flex-col md:flex-row gap-10">
+            <div className="flex flex-col gap-10 md:flex-row">
               {ProjectData.map((project) => (
                 <div>
                   <TailwindCard project={project} />
@@ -343,14 +346,14 @@ function App() {
           </Grid>
 
           <Grid item xs={12} className="pt-10">
-            <h2 className=" about font-bold text text-red-400 flex flex-row items-center justify-center">
-              <span className="text-red-400  sf-mono  ">5. Skills</span>{" "}
+            <h2 className="flex flex-row items-center justify-center font-bold text-red-400 about text">
+              <span className="text-red-400 sf-mono ">5. Skills</span>{" "}
               <div class=" border-t border-slate-600 flex-grow opacity-50 ml-4 mr-10"></div>
             </h2>
           </Grid>
           <Grid item xs={12} md={6}>
             <div style={style.p100}>
-              <div className="text-slate-400  mt-5 about-body">
+              <div className="mt-5 text-slate-400 about-body">
                 <Skills />
               </div>
             </div>
@@ -378,7 +381,7 @@ function App() {
               src={s}
               alt="slogo"
               style={{ width: "80px", paddingLeft: "10px" }}
-              className="hover:scale-110 ease-in-out duration-300"
+              className="duration-300 ease-in-out hover:scale-110"
             />
           </Grid>
           <Grid
@@ -391,7 +394,7 @@ function App() {
           >
             {" "}
             <p
-              className=" text-slate-400 ml-5 hover:scale-110 ease-in-out duration-300 "
+              className="ml-5 duration-300 ease-in-out text-slate-400 hover:scale-110"
               style={{ display: "flex", gap: "10px" }}
             >
               <img src={github} style={{ width: "20px" }} alt="github" />
@@ -411,7 +414,7 @@ function App() {
           >
             {" "}
             <p
-              className=" text-slate-400 ml-5 hover:scale-110 ease-in-out duration-300 "
+              className="ml-5 duration-300 ease-in-out text-slate-400 hover:scale-110"
               style={{ display: "flex", gap: "10px" }}
             >
               <img src={linkedin} style={{ width: "20px" }} alt="linkedin" />
@@ -433,7 +436,7 @@ function App() {
           >
             {" "}
             <p
-              className=" text-slate-400 ml-5 hover:scale-110 ease-in-out duration-300 "
+              className="ml-5 duration-300 ease-in-out text-slate-400 hover:scale-110"
               style={{ display: "flex", gap: "10px" }}
             >
               <img src={mail} style={{ width: "20px" }} alt="mail" />
@@ -455,7 +458,7 @@ function App() {
           >
             {" "}
             <p
-              className=" text-slate-400 ml-5 hover:scale-110 ease-in-out duration-300 "
+              className="ml-5 duration-300 ease-in-out text-slate-400 hover:scale-110"
               style={{ display: "flex", gap: "10px" }}
             >
               <img src={cvlogo} style={{ width: "20px" }} alt="cv" />
@@ -478,7 +481,7 @@ function App() {
             {" "}
             <a
               href="tel:+919647149128"
-              className=" text-slate-400 ml-5 hover:scale-110 ease-in-out duration-300 "
+              className="ml-5 duration-300 ease-in-out text-slate-400 hover:scale-110"
               style={{ display: "flex", gap: "10px" }}
             >
               <img src={phlogo} style={{ width: "20px" }} alt="phone" />
@@ -487,7 +490,7 @@ function App() {
           </Grid>
         </Grid>
       </section>
-      {/* <section className="snap-always section-two p-10 m-10"></section> */}
+      {/* <section className="p-10 m-10 snap-always section-two"></section> */}
     </div>
   );
 }
