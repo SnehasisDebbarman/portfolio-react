@@ -32,6 +32,88 @@ import js from "./logos/js_logo.svg";
 
 import TailwindCard from "./TailwindCard/TailwindCard";
 import ProjectData from "./TailwindCard/ProjectData";
+
+const Header = () => {
+  return (
+    <div className="fixed top-0 z-50 flex flex-row items-center justify-between w-full px-5 py-4 bg-gray-800">
+      <div className="z-10 flex items-center ">
+        <img
+          src={s}
+          alt="slogo"
+          className="w-[40px] md:w-12   hover:scale-110 ease-in-out duration-300 "
+        />
+        <h1
+          className="text-[10px] md:text-[30px] text-red-400 hover:text-red-300 hover:scale-110 ease-in-out duration-300"
+          style={style.name}
+        >
+          <Bounce left cascade>
+            Snehasis Debbarman
+          </Bounce>
+        </h1>
+      </div>
+
+      <div className="z-10 hidden md:block ">
+        <a href="#about" className="px-4 py-2 text-red-400 ">
+          {" "}
+          About Me
+        </a>
+        <a href="#work" className="px-4 py-2 text-red-400 ">
+          {" "}
+          Work
+        </a>
+        <a href="#projects" className="px-4 py-2 text-red-400 ">
+          {" "}
+          Projects
+        </a>
+        <a
+          href="#contact"
+          // onClick={() => window.location.replace("#contact")}
+          className="px-4 py-2 text-red-400 "
+        >
+          {" "}
+          Contact
+        </a>
+        <a href={myPdf} download="snehasisResume.pdf">
+          {" "}
+          <button className="py-2 px-4 text-bold bg-red-400 text-slate-100 rounded-[5px] ">
+            Resume
+          </button>
+        </a>
+      </div>
+    </div>
+  );
+};
+const style = {
+  slogo: {
+    position: "fixed",
+    left: "2rem",
+    top: "2rem",
+    zIndex: "5",
+    display: "flex",
+    alignItems: "center",
+  },
+  name: {
+    fontWeight: "800",
+    marginLeft: "20px",
+  },
+
+  downCV: {
+    width: "auto",
+    position: "fixed",
+    right: "2rem",
+    top: "2rem",
+    zIndex: "5",
+  },
+  p50: { paddingTop: "50px" },
+  p100: { paddingTop: "100px" },
+  s51container: {
+    padding: "50px",
+    background: "#03101a",
+    marginTop: "100px",
+    rowGap: "20px",
+    float: "left",
+  },
+};
 //data
 const SkillIconGrid = ({ icon }) => {
   return (
@@ -60,104 +142,17 @@ function App() {
     axiosIcon,
     muiIcon,
   ];
-  const style = {
-    slogo: {
-      position: "fixed",
-      left: "2rem",
-      top: "2rem",
-      zIndex: "5",
-      display: "flex",
-      alignItems: "center",
-    },
-    name: {
-      fontWeight: "800",
-      marginLeft: "20px",
-    },
-
-    downCV: {
-      width: "auto",
-      position: "fixed",
-      right: "2rem",
-      top: "2rem",
-      zIndex: "5",
-    },
-    p50: { paddingTop: "50px" },
-    p100: { paddingTop: "100px" },
-    s51container: {
-      padding: "50px",
-      background: "#03101a",
-      marginTop: "100px",
-      rowGap: "20px",
-      float: "left",
-    },
-  };
 
   return (
     <div className="pt-24 overflow-hidden snap-y snap-mandatory ">
+      <Header />
+
       <div className="cover top-0 h-[100vh] w-[100vw] absolute "></div>
       <div id="stars-container">
         <div class="star"></div>
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
-      </div>
-      <div>
-        <div style={style.slogo}>
-          <img
-            src={s}
-            alt="slogo"
-            className="w-[40px] md:w-16   hover:scale-110 ease-in-out duration-300 "
-          />
-          <h1
-            className="text-[10px] md:text-[30px] text-red-400 hover:text-red-300 hover:scale-110 ease-in-out duration-300"
-            style={style.name}
-          >
-            <Bounce left cascade>
-              Snehasis Debbarman
-            </Bounce>
-          </h1>
-        </div>
-
-        <div style={style.downCV} className="hidden lg:block">
-          <a
-            href="#about"
-            // onClick={() => window.location.replace("#about")}
-            className="px-4 py-2 text-red-400 "
-          >
-            {" "}
-            About Me
-          </a>
-          <a
-            href="#work"
-            // onClick={() => window.location.replace("#work")}
-            className="px-4 py-2 text-red-400 "
-          >
-            {" "}
-            Work
-          </a>
-          <a
-            href="#projects"
-            // onClick={() => window.location.replace("#projects")}
-            className="px-4 py-2 text-red-400 "
-          >
-            {" "}
-            Projects
-          </a>
-          <a
-            href="#contact"
-            // onClick={() => window.location.replace("#contact")}
-            className="px-4 py-2 text-red-400 "
-          >
-            {" "}
-            Contact
-          </a>
-          <a href={myPdf} download="snehasisResume.pdf">
-            {" "}
-            <button className="py-2 px-4 text-bold bg-red-400 text-slate-100 rounded-[5px] ">
-              Resume
-            </button>
-          </a>
-        </div>
       </div>
 
       {/* <Nav className="" /> */}
@@ -298,7 +293,7 @@ function App() {
                       </span>{" "}
                       Fyllo by Agrihawk Technologies LTD.{" "}
                       <span className="float-right text-red-400 sf-mono">
-                        May'22-present
+                        May'22-Apr'23
                       </span>
                     </h3>
                     <div className="mt-5 text-slate-400">
@@ -317,6 +312,41 @@ function App() {
                             Maintaining and developing new Features the Fyllo
                             Farmer's app using Expo, ReactJs, React Native,
                             HTML, CSS, Javascript/ES6/ES2017.
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ol>
+              </div>
+
+              <div className="mt-5 text-slate-400 about-body">
+                <ol>
+                  <li>
+                    <h3 className=" text-slate-400 font-semiBold text">
+                      <span className="text-red-400 sf-mono about-text">
+                        III.
+                      </span>{" "}
+                      Uno Digital Bank{" "}
+                      <span className="float-right text-red-400 sf-mono">
+                        May'23-present
+                      </span>
+                    </h3>
+                    <div className="mt-5 text-slate-400">
+                      <ul>
+                        <li>
+                          <p className="ml-5 text-slate-400">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Developing and maintaining the CRM application using
+                            ReactJs, HTML, CSS, Javascript/ES6/ES2017.
+                          </p>
+                        </li>
+                        <li>
+                          <p className="ml-5 text-slate-400">
+                            <span className="text-red-400 sf-mono">* </span>
+                            Maintaining and developing new Features in Customer
+                            app using, ReactJs, React Native, HTML, CSS,
+                            Javascript/ES6/ES2017.
                           </p>
                         </li>
                       </ul>
